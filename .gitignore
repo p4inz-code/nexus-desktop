@@ -1,0 +1,26 @@
+# This repo is docs + release binaries ONLY. Nexus is closed-source —
+# the safety net below exists in case source ever gets copied into this
+# folder by accident. It should never happen, but better safe.
+
+# Build artifacts / source (should never live in this repo)
+bin/
+obj/
+dist/
+*.dll
+*.exe
+*.pdb
+
+# Anything that looks like the private tooling
+BypassGen/
+KeyGen/
+dist-keygen/
+keys.json
+
+# Internal process docs — for Grim's own reference, not for the public repo
+internal/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.user
+.vs/

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: License key / activation help
+    url: https://discord.gg/XFF5nV53ZJ
+    about: For beta key requests or activation problems, please use Discord rather than an issue.
+  - name: General questions & discussion
+    url: https://discord.gg/XFF5nV53ZJ
+    about: For anything that isn't a bug or feature request, join the Discord.
+  - name: Security vulnerability
+    url: mailto:atharva.patil.cg@gmail.com
+    about: Please report security issues privately by email or Discord DM, not as a public issue. See SECURITY.md.

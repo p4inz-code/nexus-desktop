@@ -1,0 +1,93 @@
+NEXUS END USER LICENSE AGREEMENT
+
+Copyright (c) 2026 Northbyte Studios (Atharva Patil), Navi Mumbai, India.
+All rights reserved.
+
+This is a proprietary software license, not an open-source license. This
+repository's code hosting (where applicable), documentation, and issue
+tracker are provided publicly; the Nexus application itself is closed-source
+and is not distributed as source code under this or any other license.
+
+1. ACCEPTANCE AND OWNERSHIP
+Nexus is proprietary software owned exclusively by Northbyte Studios
+(Atharva Patil, Navi Mumbai, India). By installing, activating, or using
+Nexus, you agree to be bound by this agreement. If you do not agree, do not
+use the software.
+
+2. LICENSE GRANT
+You are granted a personal, non-transferable, non-exclusive license to
+install and use Nexus during the free public beta period, for personal or
+internal business use. You may not sublicense, lease, rent, lend, or resell
+access to this software.
+
+3. FREE BETA PROGRAM
+Nexus is currently provided free of charge during the public beta phase
+(2026). Access requires a license key issued directly by Northbyte Studios
+via Discord or email — there is no payment platform and no automated
+purchase. Keys are non-transferable and bound to a single user. We reserve
+the right to revoke any key found to be shared, leaked, or distributed
+publicly. Beta access does not guarantee continued free access after the
+beta period ends — see Section 4.
+
+The first 20–30 active beta testers may, at Northbyte Studios' sole
+discretion, receive a complimentary lifetime license. This is a discretionary
+gesture of appreciation, not a formal program, and carries no guaranteed
+terms, eligibility criteria, or entitlement.
+
+4. TRANSITION TO A PAID VERSION
+Northbyte Studios plans to introduce a paid version of Nexus after the beta
+period concludes. Beta users may be offered preferential terms at the
+discretion of Northbyte Studios, which may include a discount, an extended
+free period, or continued free access — exact terms will be communicated via
+Discord before any change takes effect. Nothing in this section constitutes
+a guarantee of any specific benefit.
+
+5. PRIVACY AND DATA
+Nexus operates entirely offline, with zero network calls of any kind. We
+collect no personal data, no telemetry, and no usage analytics through the
+application itself. Your files never leave your device. License key
+verification is performed locally on your machine — no server, no internet
+connection, ever. See PRIVACY.md for what limited information is collected
+during the manual beta-key issuance process (outside the application).
+
+6. DISCLAIMER OF WARRANTY
+NEXUS IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE THE SOFTWARE
+WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VULNERABILITIES.
+
+7. LIMITATION OF LIABILITY
+To the maximum extent permitted by law, Northbyte Studios shall not be
+liable for any indirect, incidental, special, consequential, or punitive
+damages, or any loss of data, profits, or revenues, arising from your use of
+Nexus. Since Nexus is provided free of charge during the beta period, our
+total liability is limited to zero. You are solely responsible for backing
+up your vault data. We strongly recommend storing your master password and
+recovery phrase securely — there is no password recovery beyond the
+recovery mechanisms built into the app, and no server-side reset is
+possible.
+
+8. PROHIBITED USE
+You may not (a) use Nexus for illegal activities, (b) reverse engineer,
+decompile, or disassemble the software, (c) remove or alter copyright
+notices, (d) bypass the license verification system, (e) create derivative
+works, or (f) use Nexus to store content that violates the laws of your
+jurisdiction.
+
+9. TERMINATION
+This license terminates automatically if you breach any term. Upon
+termination you must uninstall Nexus and destroy all copies. We reserve the
+right to revoke license keys involved in piracy, sharing, or abuse, with no
+entitlement to compensation since the software is provided free of charge.
+
+10. GOVERNING LAW
+This agreement is governed by the laws of India. Any dispute shall be
+resolved in the courts of Mumbai, Maharashtra. If any provision is found
+unenforceable, the remaining provisions remain in full effect.
+
+11. SUPPORT AND CONTACT
+For support, license issues, or bug reports: discord.gg/XFF5nV53ZJ or
+atharva.patil.cg@gmail.com. We aim to respond within 48 hours. We do not
+provide phone support.
+
+© 2026 Northbyte Studios. Atharva Patil. All rights reserved.
