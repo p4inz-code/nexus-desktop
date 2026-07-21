@@ -1,5 +1,10 @@
 # Nexus
 
+![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
+![Status](https://img.shields.io/badge/status-Public%20Beta-orange)
+![License](https://img.shields.io/badge/license-Proprietary-lightgrey)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/XFF5nV53ZJ)
+
 **An offline-first, encrypted file vault for Windows.**
 
 Nexus keeps your files, notes, credentials, and personal data behind strong local encryption — no cloud, no account, no telemetry. Everything happens on your machine.

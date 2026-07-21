@@ -30,7 +30,9 @@ promise with dates — priorities can and will shift based on beta feedback.
   supporters at Northbyte Studios' discretion.
 - Server-side license verification returns at this stage (the current
   offline verification is intentionally minimal-trust, appropriate for a
-  free beta — see the security notes in our internal release history).
+  free beta — see
+  [Known limitations](SECURITY.md#known-limitations-disclosed-not-hidden)
+  in our security policy).
 
 ## Not currently planned
 

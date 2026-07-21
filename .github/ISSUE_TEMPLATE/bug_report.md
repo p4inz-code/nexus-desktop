@@ -36,8 +36,9 @@ What you expected to happen instead.
 
 If Nexus crashed or failed to start, please attach `nexus_startup.log`
 and/or `nexus_crash.log` from your **Desktop** if present — see
-[Troubleshooting](../../docs/TROUBLESHOOTING.md) for details. These only
-contain local diagnostic info; nothing is sent anywhere automatically.
+[Troubleshooting](https://github.com/p4inz-code/nexus-desktop/blob/main/docs/TROUBLESHOOTING.md)
+for details. These only contain local diagnostic info; nothing is sent
+anywhere automatically.
 
 ## Screenshots
 
