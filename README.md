@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/p4inz-code/nexus-desktop/main/assets/banner.png" alt="Nexus Desktop Banner" width="100%">
+</p>
+
 # Nexus
 
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
