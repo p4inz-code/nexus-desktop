@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/p4inz-code/nexus-desktop/main/assets/banner.png" alt="Nexus Desktop Banner" width="100%">
+  <img src="https://github.com/p4inz-code/nexus-desktop/blob/main/assets/banner.png?raw=true" alt="Nexus Desktop Banner" width="100%">
 </p>
 
 # Nexus
