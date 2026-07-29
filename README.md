@@ -14,7 +14,7 @@
 
 Nexus keeps your files, notes, credentials, and personal data behind strong local encryption — no cloud, no account, no telemetry. Everything happens on your machine.
 
-> **Status: Public Beta.** Nexus is under active development by a solo developer. Expect rough edges, and please [report anything that breaks](#support--feedback).
+> **Status: Public Beta.** Nexus is actively developed by a solo indie developer. It's real software people use, not a demo — but the beta label is on it for a reason. See [Known Issues](docs/KNOWN_ISSUES.md) for the current honest list, and please [report anything that breaks](#support--feedback).
 
 ---
 

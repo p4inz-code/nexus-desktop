@@ -5,13 +5,16 @@ promise with dates — priorities can and will shift based on beta feedback.
 
 ## Now: Public Beta
 
-- `v10.9.1` is the first public beta tag — feature set described in the
-  [Changelog](CHANGELOG.md).
-- Finish the remaining pre-launch verification pass (screenshot behavior,
-  license bypass paths, light theme) — tracked in
+Nexus is in active public beta. `v10.9.1` was the first public tag; the
+current line has continued through security and stability work — see the
+[Changelog](CHANGELOG.md) for what shipped when. Immediate focus:
+
+- Continue closing beta feedback quickly. Stability and correctness fixes
+  take priority over new features throughout the beta.
+- Complete the remaining verification items tracked in
   [Known Issues](docs/KNOWN_ISSUES.md).
-- Onboard the first wave of beta testers via Discord and gather real-world
-  bug reports before widening access.
+- Grow the tester base gradually via Discord rather than pushing for scale
+  before the feedback loop is well-tuned.
 
 ## Next
 

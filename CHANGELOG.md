@@ -12,6 +12,60 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/XFF5nV53ZJ).
 
+## [10.12.0] — 2026-07-29 — Vault encryption corrected to real AES-256-GCM
+
+We've said "AES-256-GCM" since our very first release. An internal review
+caught that this wasn't quite true: the actual cipher was AES-256-CBC paired
+with a plain SHA-256 hash standing in for integrity checking — not an
+authenticated cipher, and not tamper-evident the way GCM implies. We're
+correcting that now rather than let a security claim stand that wasn't fully
+accurate.
+
+### Fixed
+- **Vault encryption is now genuinely AES-256-GCM**, keyed the same way as
+  before (Argon2id from your master password). Every file you save from this
+  version onward is encrypted with real, authenticated AES-256-GCM.
+- **Nothing in your existing vault is affected.** Files already saved under
+  the previous method keep opening exactly as they do today — there's no
+  re-import, no migration step, no waiting. They'll transparently move to the
+  new method the next time you save or edit them.
+
+### Why we're telling you this instead of quietly fixing it
+Because we'd rather you hear about a real gap between what we said and what
+we shipped from us than find it yourselves. Practical risk during the affected
+period was limited — this is an offline, local-file app, so exploiting the
+gap required someone already having write access to your vault files, at
+which point they have significant access regardless. But "limited risk" isn't
+the same as "no gap," and we're not going to pretend otherwise.
+
+## [10.11.0] — 2026-07-29 — Theme consistency pass
+
+A pass through every screen against all 12 themes. Nexus has supported 12
+color themes for a while, but a long tail of UI elements (buttons, banners,
+the scrollbar, a few theme-picker previews) stayed hardcoded to purple
+regardless of which theme was actually active. This release fixes that,
+adds a proper theme-aware "warning" color, and adds a visible keyboard-focus
+indicator that was previously missing app-wide.
+
+### Fixed
+- Theme consistency across dozens of UI elements — Settings' primary button,
+  the app-wide scrollbar, lock-screen and auto-lock warning banners, file
+  selection highlighting, and the video/PDF viewer chrome now all follow
+  your active theme instead of staying purple.
+- Three separate theme-picker previews (Settings, first-run setup, and a
+  third one inside the Settings dialog) could show the wrong swatch color
+  once you'd already picked a different theme. Fixed in all three.
+- No visible focus indicator when navigating by keyboard (Tab key) — added
+  to every button app-wide and the main sidebar navigation.
+- Icon buttons in the title bar (Minimize/Maximize/Settings) could lose
+  contrast on hover/press on lighter themes. Fixed.
+- The Factory Reset button now visually signals it's a destructive action
+  (red border), not just red text.
+
+### Added
+- A theme-aware "warning" color used consistently for amber/caution UI
+  (previously scattered as fixed hex values in several places).
+
 ## [10.10.0] — 2026-07-22 — Whole-app security & data-integrity audit
 
 A full-app audit covering data integrity, security, and resource handling —
