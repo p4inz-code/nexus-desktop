@@ -29,6 +29,10 @@ accurate.
   the previous method keep opening exactly as they do today — there's no
   re-import, no migration step, no waiting. They'll transparently move to the
   new method the next time you save or edit them.
+- **Create-new-vault flow fixed.** Creating a new vault from the vault
+  switcher used to drop you on the unlock screen prompting for a password
+  you hadn't set yet — you'd have to restart the app to reach the setup
+  wizard. Now the setup wizard opens directly after you create a new vault.
 
 ### Why we're telling you this instead of quietly fixing it
 Because we'd rather you hear about a real gap between what we said and what
