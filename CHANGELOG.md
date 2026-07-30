@@ -34,6 +34,13 @@ accurate.
   you hadn't set yet — you'd have to restart the app to reach the setup
   wizard. Now the setup wizard opens directly after you create a new vault.
 
+### Added
+- **In-app updates.** Settings → Updates shows the current version, a
+  "Check for updates" button, and a full download / verify / install flow.
+  Three modes: Off, Notify (default), or Automatic. Restarting to install
+  is always a manual confirm — Nexus will never close your vault silently
+  to update.
+
 ### Why we're telling you this instead of quietly fixing it
 Because we'd rather you hear about a real gap between what we said and what
 we shipped from us than find it yourselves. Practical risk during the affected
