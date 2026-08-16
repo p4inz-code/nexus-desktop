@@ -6,7 +6,7 @@
 Report privately instead:
 
 - Email: atharva.patil.cg@gmail.com
-- Discord: [discord.gg/XFF5nV53ZJ](https://discord.gg/XFF5nV53ZJ) (direct
+- Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW) (direct
   message, not a public channel)
 
 Include as much detail as you can: what you found, how to reproduce it, and

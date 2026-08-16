@@ -8,13 +8,37 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
 ![Status](https://img.shields.io/badge/status-Public%20Beta-orange)
 ![License](https://img.shields.io/badge/license-Proprietary-lightgrey)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/XFF5nV53ZJ)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/8UKt8s5FbW)
 
 **An offline-first, encrypted file vault for Windows.**
 
 Nexus keeps your files, notes, credentials, and personal data behind strong local encryption — no cloud, no account, no telemetry. Everything happens on your machine.
 
 > **Status: Public Beta.** Nexus is actively developed by a solo indie developer. It's real software people use, not a demo — but the beta label is on it for a reason. See [Known Issues](docs/KNOWN_ISSUES.md) for the current honest list, and please [report anything that breaks](#support--feedback).
+
+---
+
+## Screenshots
+
+Real frames from the v11 UI, not concept art.
+
+<p align="center">
+  <img src="assets/screenshots/lock-screen.png" alt="Nexus lock screen — split brand and master password entry with trust chips for AES-256-GCM, zero telemetry, offline-first, anti-tamper" width="100%">
+  <br><em>Lock screen — trust context visible before you even unlock</em>
+</p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="assets/screenshots/media-browser.png" alt="Nexus media browser — sidebar navigation with vault sections, thumbnail grid of encrypted media" width="100%">
+      <p align="center"><em>Media browser</em></p>
+    </td>
+    <td width="50%">
+      <img src="assets/screenshots/import-files.png" alt="Nexus import screen — drag-and-drop zone with live encryption progress bar" width="100%">
+      <p align="center"><em>Import — live encryption progress</em></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -49,7 +73,7 @@ Every release ships with a SHA-256 hash of the executable. Verify it before runn
 
 Nexus is free during the public beta. License keys are issued manually — there's no self-serve purchase flow yet. To request access:
 
-- Discord: [discord.gg/XFF5nV53ZJ](https://discord.gg/XFF5nV53ZJ)
+- Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW)
 - Email: atharva.patil.cg@gmail.com
 
 The first 20–30 active beta testers may receive a complimentary lifetime license, at Northbyte Studios' sole discretion. This isn't a formal program with guaranteed terms — just our way of thanking early testers.
@@ -76,7 +100,7 @@ See [SECURITY.md](SECURITY.md) for vulnerability reporting and [PRIVACY.md](PRIV
 ## Support & feedback
 
 - Bugs and feature requests: [open an issue](../../issues/new/choose)
-- Everything else: [Discord](https://discord.gg/XFF5nV53ZJ) or atharva.patil.cg@gmail.com
+- Everything else: [Discord](https://discord.gg/8UKt8s5FbW) or atharva.patil.cg@gmail.com
 - See [SUPPORT.md](SUPPORT.md) for details
 
 ## License
@@ -85,4 +109,4 @@ Nexus is proprietary software. See [LICENSE](LICENSE) for the full end-user lice
 
 ---
 
-Built by [Northbyte Studios](https://discord.gg/XFF5nV53ZJ).
+Built by [Northbyte Studios](https://discord.gg/8UKt8s5FbW).

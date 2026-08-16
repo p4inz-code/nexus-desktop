@@ -18,14 +18,14 @@ known one with a documented workaround.
 Beta license keys are issued manually, not through an automated system.
 For a key, an activation problem, or a machine change:
 
-- Discord: [discord.gg/XFF5nV53ZJ](https://discord.gg/XFF5nV53ZJ) (fastest)
+- Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW) (fastest)
 - Email: atharva.patil.cg@gmail.com
 
 See [Activation](docs/ACTIVATION.md) for how keys work.
 
 ## General questions & discussion
 
-[Discord](https://discord.gg/XFF5nV53ZJ) is the best place for general
+[Discord](https://discord.gg/8UKt8s5FbW) is the best place for general
 questions, feedback, and discussion with other beta testers.
 
 ## Security issues

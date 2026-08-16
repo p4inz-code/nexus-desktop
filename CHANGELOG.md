@@ -10,7 +10,7 @@ public debut — this changelog starts at that public debut and will be kept
 current with every release going forward. It intentionally doesn't dump the
 full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
-[Discord](https://discord.gg/XFF5nV53ZJ).
+[Discord](https://discord.gg/8UKt8s5FbW).
 
 ## [10.12.0] — 2026-07-29 — Vault encryption corrected to real AES-256-GCM
 

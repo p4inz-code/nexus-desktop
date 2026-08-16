@@ -46,4 +46,4 @@ current line has continued through security and stability work — see the
 ## Feedback shapes this list
 
 If there's a feature you want, or a workflow that's painful, tell us:
-[Discord](https://discord.gg/XFF5nV53ZJ) or atharva.patil.cg@gmail.com.
+[Discord](https://discord.gg/8UKt8s5FbW) or atharva.patil.cg@gmail.com.

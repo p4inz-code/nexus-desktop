@@ -17,7 +17,7 @@ against [SECURITY.md](../SECURITY.md).
    you report the issue.
 3. Also check your Desktop for `nexus_crash.log`, which captures unhandled
    crash details if one occurred.
-4. Report it via [Discord](https://discord.gg/XFF5nV53ZJ) or
+4. Report it via [Discord](https://discord.gg/8UKt8s5FbW) or
    [open an issue](../../../issues/new/choose), and include both log files
    if present. They only ever contain local diagnostic info — nothing is
    sent anywhere automatically.
@@ -67,12 +67,12 @@ screenshot tools when enabled. If it's not behaving as documented:
 2. Check `nexus_startup.log` on your Desktop for the line showing the
    resolved Streamer Mode state at startup.
 3. Report what you're seeing, along with that log line, via
-   [Discord](https://discord.gg/XFF5nV53ZJ) or a
+   [Discord](https://discord.gg/8UKt8s5FbW) or a
    [GitHub issue](../../../issues/new/choose) — this area has had a lot of
    attention recently and we want to know if anything's still off.
 
 ## Still stuck?
 
 - [Known Issues](KNOWN_ISSUES.md) — check if it's already a known gap.
-- [Discord](https://discord.gg/XFF5nV53ZJ) — fastest response.
+- [Discord](https://discord.gg/8UKt8s5FbW) — fastest response.
 - atharva.patil.cg@gmail.com — if you'd rather not use Discord.

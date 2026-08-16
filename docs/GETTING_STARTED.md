@@ -59,5 +59,5 @@ confirmed your recovery phrase is stored somewhere durable.
 
 - [Known Issues](KNOWN_ISSUES.md) — what's still rough during the beta.
 - [Troubleshooting](TROUBLESHOOTING.md) — if something doesn't work.
-- [Discord](https://discord.gg/XFF5nV53ZJ) — beta community and fastest
+- [Discord](https://discord.gg/8UKt8s5FbW) — beta community and fastest
   support channel.

@@ -48,8 +48,8 @@ without one.
 
 If this changes materially in the future (for example, if a paid version
 introduces a payment processor), we'll update this document and announce it
-via [Discord](https://discord.gg/XFF5nV53ZJ) before the change takes effect.
+via [Discord](https://discord.gg/8UKt8s5FbW) before the change takes effect.
 
 ## Questions
 
-atharva.patil.cg@gmail.com or [Discord](https://discord.gg/XFF5nV53ZJ).
+atharva.patil.cg@gmail.com or [Discord](https://discord.gg/8UKt8s5FbW).

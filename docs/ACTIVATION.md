@@ -9,7 +9,7 @@ at all. The cost is that getting a key takes a human on the other end.
 
 To request one:
 
-- Discord: [discord.gg/XFF5nV53ZJ](https://discord.gg/XFF5nV53ZJ)
+- Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW)
 - Email: atharva.patil.cg@gmail.com
 
 The first 20–30 active beta testers may, at Northbyte Studios' discretion,
@@ -34,7 +34,7 @@ Keys are:
 Because activation is machine-bound and verified locally, there's currently
 no self-service way to move a key to a new machine from inside the app. If
 you need to reinstall Nexus or move to a different computer, reach out to
-us on [Discord](https://discord.gg/XFF5nV53ZJ) or by email and we'll help
+us on [Discord](https://discord.gg/8UKt8s5FbW) or by email and we'll help
 you sort it out.
 
 ## If your key stops working
