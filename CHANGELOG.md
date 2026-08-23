@@ -12,6 +12,17 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.4] — 2026-08-23 — Streamer Mode capture policy is now self-verifying
+
+Follow-up to 10.12.3: rather than just trust that the previous fix's
+workaround reliably works, Nexus now checks.
+
+### Added
+- Every screen-capture visibility change is now read back from Windows
+  and automatically retried if it doesn't match what was requested —
+  self-correcting instead of assume-and-hope. Persistent mismatches are
+  logged for diagnosability.
+
 ## [10.12.3] — 2026-08-23 — Streamer Mode "off" didn't reliably mean off
 
 A real, reported bug: turning Streamer Mode off didn't reliably restore
