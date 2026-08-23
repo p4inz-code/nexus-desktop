@@ -12,7 +12,22 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
-## [10.12.0] — 2026-07-29 — Vault encryption corrected to real AES-256-GCM
+## [10.12.1] — 2026-08-23 — Discord community moved
+
+Our Discord server finished a full rebrand — new name (Northbyte Studios,
+was Obsidian Labs) and a rebuilt server. This release just points every
+in-app and documentation link at the new invite; nothing functional
+changed.
+
+### Fixed
+- Discord invite updated everywhere it appears — in the app (About,
+  Activation, EULA, and elsewhere) and across this repo's documentation.
+  The old invite is retired.
+- Two small changelog inaccuracies from the previous entry corrected: a
+  dead link to an internal-only audit report writeup, and this file's own
+  v10.12.0 date (was one day off).
+
+## [10.12.0] — 2026-07-30 — Vault encryption corrected to real AES-256-GCM
 
 We've said "AES-256-GCM" since our very first release. An internal review
 caught that this wasn't quite true: the actual cipher was AES-256-CBC paired
@@ -80,8 +95,9 @@ indicator that was previously missing app-wide.
 ## [10.10.0] — 2026-07-22 — Whole-app security & data-integrity audit
 
 A full-app audit covering data integrity, security, and resource handling —
-not a single-feature pass. Full technical writeup in `AUDIT_REPORT_v10.10.0.md`
-for anyone who wants it; short version below.
+not a single-feature pass. Short version below (the full internal technical
+writeup isn't published separately — ask on Discord if you want more detail
+on a specific fix).
 
 ### Fixed
 - **Password change could silently corrupt the vault.** Two separate bugs in

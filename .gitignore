@@ -16,7 +16,7 @@ KeyGen/
 dist-keygen/
 keys.json
 
-# Internal process docs — for Grim's own reference, not for the public repo
+# Internal process docs — for p4inz's own reference, not for the public repo
 internal/
 
 # OS/editor noise
