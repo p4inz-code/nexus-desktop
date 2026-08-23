@@ -12,6 +12,49 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.6] — 2026-08-23 — Security claims audit: 7 real fixes
+
+We ran a full internal audit against every security and privacy claim we
+make — not prompted by a specific report this time, just checking our own
+work before we'd stand behind these claims to a skeptical user. Found and
+fixed 7 real issues, three of them meaningful enough that we want to be
+upfront about them rather than bury them in a bullet list.
+
+### The three worth explaining plainly
+
+**Decoy vault didn't actually work.** You could set a decoy password in
+Settings, but entering it at the lock screen was treated as simply wrong
+— it wouldn't open a decoy vault, and repeated use could even trigger the
+same lockout as a real intrusion attempt. Fixed, with equal-time
+verification so response speed can't reveal which password type was
+entered — that timing signal would defeat the whole point of a decoy.
+
+**Activity log tamper-evidence used a key that wasn't actually secret.**
+The HMAC chain protecting the activity log from silent tampering was
+keyed from device hardware identifiers — readable locally by anyone with
+access to the machine, which is exactly the attacker this feature exists
+to catch. Now derived from your vault password instead.
+
+**Anti-tamper detection had a real gap that could let it silently stop
+running.** A shared internal flag could cause the periodic security sweep
+(debugger detection, process injection checks, and more) to skip itself
+indefinitely under the wrong timing. Fixed and confirmed working with a
+live test.
+
+### Also fixed
+- Vault database saves could intermittently fail to persist silently — a
+  real reliability issue we're not comfortable leaving unaddressed.
+- Remote-access session detection now recognizes common remote-access
+  tools directly, not just Windows Remote Desktop.
+- Background trace-cleanup for thumbnail cache now falls back to a
+  scheduled cleanup when Windows has the file locked, instead of quietly
+  not happening.
+- Security status indicators in the app now reflect verified, current
+  state rather than just "is a background check enabled."
+
+Full technical detail on each — including how each fix was verified — is
+more than fits here; ask on Discord if you want it.
+
 ## [10.12.5] — 2026-08-23 — Streamer Mode fix, verified
 
 10.12.4's fix didn't fully hold up in real testing — thank you for
