@@ -12,6 +12,23 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.3] — 2026-08-23 — Streamer Mode "off" didn't reliably mean off
+
+A real, reported bug: turning Streamer Mode off didn't reliably restore
+screenshot capability. Traced to two settings-save races that could let a
+stale "still on" value silently reload right after toggling off, plus a
+documented Windows quirk where reversing screen-capture exclusion doesn't
+always take effect from a single API call without extra prompting. Both
+closed.
+
+### Fixed
+- Two race conditions around how the Streamer Mode setting gets saved and
+  re-read, either of which could silently re-enable capture protection
+  moments after you turned it off.
+- Reversing screen-capture exclusion now also forces a window-surface
+  refresh, working around a known Windows limitation where the plain API
+  call alone doesn't always take effect for every capture method.
+
 ## [10.12.2] — 2026-08-23 — Auto-updater durability hardening
 
 A few fixes to the in-app updater aimed at long-term reliability rather
