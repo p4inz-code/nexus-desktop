@@ -12,6 +12,22 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.5] — 2026-08-23 — Streamer Mode: deeper fix after a real report
+
+10.12.4's fix didn't fully hold up in real testing — thank you for
+reporting it. Root-caused further and replaced the underlying technique
+with a stronger, more direct one, rather than patching the same idea
+again. Full technical detail on what was wrong and why in the internal
+release notes, summarized honestly here: our previous "verify it worked"
+check was reading a value that would always report success regardless of
+whether the fix actually took effect — it wasn't proof of anything. This
+release replaces that with a real forced window-surface rebuild instead.
+
+### Fixed
+- Screen-capture visibility restoration now uses a stronger technique for
+  forcing Windows to actually release capture protection when Streamer
+  Mode is turned off.
+
 ## [10.12.4] — 2026-08-23 — Streamer Mode capture policy is now self-verifying
 
 Follow-up to 10.12.3: rather than just trust that the previous fix's
