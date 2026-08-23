@@ -12,6 +12,24 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.2] — 2026-08-23 — Auto-updater durability hardening
+
+A few fixes to the in-app updater aimed at long-term reliability rather
+than any specific bug report — the kind of thing that only bites months
+from now if left alone.
+
+### Fixed
+- The updater's version comparison only understood plain `X.Y.Z` release
+  tags. Any future tag using a suffix (a release candidate or beta
+  channel, for instance) would have silently stopped update checks from
+  working on every installed copy, with no way to tell why. Fixed to
+  tolerate suffixes.
+- Large downloads (the app is 180MB+) could get misreported as failed on
+  slower connections due to a generic short network timeout. Raised to a
+  realistic ceiling.
+- Update-check failures are now logged locally for diagnosability, while
+  staying just as silent to the user as before — no new UI, no new nags.
+
 ## [10.12.1] — 2026-08-23 — Discord community moved
 
 Our Discord server finished a full rebrand — new name (Northbyte Studios,
