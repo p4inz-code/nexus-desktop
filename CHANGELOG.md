@@ -12,6 +12,51 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.8] — 2026-08-25 — Decoy mode hardened: the two most serious fixes yet
+
+The most important release in this audit series. Two findings stand
+above everything else we've fixed so far:
+
+**A decoy-password holder could have permanently locked you out of your
+own vault.** Changing your password from Settings had no check for decoy
+mode at all — someone using your decoy password could change "the"
+password and lock the real owner out, or generate a new recovery phrase
+and see the real words on screen. Both now refuse outright in decoy mode.
+
+**Factory Reset didn't wipe anything, and our emergency Panic Wipe
+skipped the database.** Factory Reset ran its full confirmation flow,
+password included, then silently did nothing. Panic Wipe (the
+no-confirmation emergency hotkey) never included the database file, so
+credentials, journal entries, contacts, and bookmarks would have survived
+it. Both fixed and now share one corrected wipe path.
+
+We also root-caused the decoy-mode data leak from our previous release —
+a stale in-memory list that wasn't cleared on lock — fixed it at the
+source, and found the same issue in two more places (the intruder log
+and a security scan) that use an unrelated encryption scheme and needed
+their own fix.
+
+**Honesty note:** everything here compiles clean, but we were not able to
+live-test the two most severe fixes before shipping. We attempted to —
+automated keyboard input in our environment turned out to affect a real,
+live desktop session in an unpredictable way, so we stopped rather than
+risk it. Treat this release as fixed-in-code, pending our own hands-on
+verification, the same way we've disclosed every release in this series.
+
+### Also fixed
+- The un-hide hotkey for stealth mode now requires your password —
+  previously it was instant with zero check, for anyone with keyboard
+  access to your unlocked session.
+- A timing bug meant our "hardware-bound" machine ID never actually used
+  your hardware — always silently fell back to a much weaker value.
+- Secure delete can now report whether the real 3-pass wipe succeeded,
+  instead of failures being invisible to every caller.
+- Two more real data-loss windows closed in file import.
+- Crash logs saved to your Desktop no longer include real file names.
+
+Full technical detail is more than fits here; ask on Discord if you want
+the complete writeup.
+
 ## [10.12.7] — 2026-08-24 — Deeper audit: 17 more real fixes
 
 Continued the same audit pass that produced 10.12.6, going further into

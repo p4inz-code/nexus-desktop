@@ -36,9 +36,18 @@ against [SECURITY.md](../SECURITY.md).
 Nexus has two recovery paths:
 
 1. **Recovery phrase** — the phrase you were shown during setup. If you
-   saved it, use it to regain access from the lock screen.
+   saved it, use it from the lock screen to set a new master password.
+   **Important:** this resets your password, it does not decrypt your old
+   files. Anything added to the vault before you use it stays encrypted
+   under the old password and will no longer appear — there's no way
+   around this, since your files are encrypted directly with a key
+   derived from your password, not a separately recoverable master key.
+   The app's own recovery dialog states this plainly before you confirm,
+   since it's an irreversible step.
 2. **Machine bypass** — a fallback tied to your specific device, available
-   through Northbyte Studios if you've lost your recovery phrase too.
+   through Northbyte Studios if you've lost your recovery phrase too. Has
+   the same limitation as above — it resets your password, it doesn't
+   recover files encrypted under the old one.
 
 If you've lost **both** your master password and your recovery phrase,
 there is currently no way for us to recover your vault — this is a direct
