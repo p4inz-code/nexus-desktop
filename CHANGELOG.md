@@ -12,6 +12,96 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.7] — 2026-08-24 — Deeper audit: 17 more real fixes
+
+Continued the same audit pass that produced 10.12.6, going further into
+parts of the app we hadn't checked yet: memory handling, Windows Hello
+convenience-unlock, multi-vault/decoy isolation, backups, file
+self-destruct, and the core encrypt/decrypt integrity path. Found and
+fixed 17 more real issues. As with 10.12.6, we'd rather list what was
+actually wrong than round it up to "security hardening."
+
+**Honesty note on verification:** every fix here compiled clean and was
+traced through source carefully, but — unlike 10.12.6's anti-tamper fix —
+none of this batch has been exercised against a real running vault yet.
+That's coming before we'd call any of it fully proven.
+
+### Worth explaining plainly
+
+**Windows Hello convenience-unlock was storing your master password in a
+form any other program running as you could read — no fingerprint or PIN
+needed.** The stored credential was protected with Windows' standard
+per-user encryption but with no additional binding material, so the
+exact same one-line unlock call available to us was available to
+anything else running in your Windows session. We've added binding
+material that closes this off against generic credential-theft
+techniques. We want to be direct about the rest: this is a known
+limitation of the underlying Windows encryption primitive, not something
+we can fully close in an app like this without a much larger rebuild of
+that feature — full detail on what is and isn't protected is in our
+internal audit notes, and if you use Hello unlock and want the specifics
+before trusting it, ask on Discord.
+
+**Decoy/hidden vault names were visible in plain sight, no password
+needed.** Creating a new vault used to name its storage folder after the
+vault itself. Anyone who could browse your app-data folder — not hack
+it, just browse it — could see the name of a "hidden" vault before ever
+entering a password, defeating the point of having one. Folder names are
+now unrelated to the vault's name.
+
+**File self-destruct (expiry) silently didn't work for most users.**
+Setting or extending a file's expiry date had no real effect on the
+database backend most vaults actually use — the app would even confirm
+"expiry set" while doing nothing. Fixed.
+
+**Locking the vault could silently fail — and then silently keep failing.**
+If any single step in the lock sequence hit an error, the vault could stay
+open with no visible sign, and every later lock attempt in that session
+would then also silently do nothing. This is very likely why two of
+10.12.6's own fixes (anti-tamper and remote-session detection) correctly
+caught their trigger condition in testing but didn't visibly lock the
+vault — same underlying bug. Every step in the lock sequence is now
+independently guarded, and a failure now shows a clear warning instead of
+disappearing.
+
+**A file that failed its integrity check could still open normally.**
+Nexus authenticates every file's encryption tag on decrypt — that's the
+whole point of using AES-GCM instead of a mode without authentication. Two
+of the decrypt code paths were discarding that check's result instead of
+acting on it, so a corrupted or tampered file could still open as if
+nothing were wrong. Now refused with a clear error instead.
+
+### Also fixed
+- The vault's derived encryption key was held in ordinary, unprotected
+  memory for as long as it stayed unlocked, instead of the memory-locked
+  storage we already use for other session keys.
+- The anti-keylogger shield now covers the password-reveal ("show
+  password") view and the password-change/duress-password dialogs — it
+  previously only covered the main lock screen.
+- Backups now securely wipe the brief plaintext staging file they create,
+  instead of an ordinary delete.
+- Exported vault bundles now require a real password (8+ characters,
+  previously unenforced) since they're specifically meant to leave the
+  machine, and now tell you if any files failed to export instead of
+  going silent about it.
+- The error log no longer keeps writing to the wrong vault's file after
+  switching vaults without restarting the app.
+- The vault integrity seal (shown on the Security page) used the same
+  class of weak key our activity log's tamper-evidence had in 10.12.6 —
+  found in a file we hadn't re-checked yet. Fixed the same way.
+- Picking or creating a vault from Settings' "Manage Vaults" dialog used
+  to close the dialog and do nothing with your choice. Fixed.
+- A couple of session-key handling and small crypto-hygiene gaps closed
+  along the way.
+- Corrected a piece of internal documentation that overstated what our
+  clipboard-monitoring feature can detect (it can react to being
+  overwritten, not to being read — no API exists for the latter). No
+  behavior change, just an accuracy fix to how we described it.
+
+Full technical detail — every finding, what was broken, alternatives
+considered, exact fix, verification status — is more than fits here; ask
+on Discord if you want it.
+
 ## [10.12.6] — 2026-08-23 — Security claims audit: 7 real fixes
 
 We ran a full internal audit against every security and privacy claim we
