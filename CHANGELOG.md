@@ -12,6 +12,43 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.12.9] — 2026-08-25 — Uninstaller correctness pass + auto-updater hardening
+
+Last release introduced Nexus's first real uninstaller (app + registry +
+cached files, with vault data as a separate opt-in). This release is a
+dedicated correctness pass on it, plus hardening for the auto-updater so
+it can't leave clutter behind across versions. No new features — just
+things that needed to actually work right, found by re-checking rather
+than assuming the first version was correct.
+
+**Portable mode no longer leaves a trace on the host PC.** Running with
+`--portable`, or straight off a USB stick, used to still copy Nexus into
+this computer's AppData folder and register it in Apps & Features —
+exactly what portable mode is supposed to prevent. Both are now skipped
+for a portable run, and vault-data deletion during uninstall now looks in
+the right (portable) location instead of the normal install path.
+
+**Uninstall no longer reports false success.** The step that schedules
+Nexus's own exe for removal only worked if it happened to be running from
+one specific folder. Since Nexus has no installer, plenty of people run
+it from wherever they put it — that step was silently doing nothing for
+them while still showing a checkmark. Fixed to work regardless of where
+Nexus is running from.
+
+**Auto-updater no longer accumulates old downloads.** If an update you'd
+downloaded got superseded by a newer release before you restarted to
+apply it, or a download dropped partway through, the leftover file used
+to sit in the update cache indefinitely. Both cases are now cleaned up
+automatically.
+
+We also re-verified (not just re-asserted) that the update checker is
+still the only network call Nexus makes, and re-traced that every vault
+format we've ever shipped still decrypts correctly.
+
+**Honesty note, same as every release in this series:** compiles clean,
+not live-tested — we don't currently have a way to test full GUI flows
+outside of Atharva's own machine.
+
 ## [10.12.8] — 2026-08-25 — Decoy mode hardened: the two most serious fixes yet
 
 The most important release in this audit series. Two findings stand
