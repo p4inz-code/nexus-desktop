@@ -12,6 +12,20 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.13.2] — 2026-08-25 — Accessibility: screen-reader labels, contrast audit
+
+Icon-only buttons across the app — window close/minimize/maximize
+controls, the audio player's transport buttons, toolbar icons — now
+have real accessible names for screen readers like Narrator. Also ran
+a real, computed WCAG contrast check across every theme rather than
+eyeballing it; body text passes comfortably everywhere, and two themes
+(Slate, Midnight) have a couple of small-text spots that are marginally
+under the strictest guideline — flagged for a closer look, not changed
+blind. One known gap disclosed rather than hidden: Secure Notes'
+formatting toolbar isn't currently keyboard-reachable via Tab, a
+pre-existing limitation this pass didn't fix (needs live testing to fix
+safely without breaking the editor's existing click behavior).
+
 ## [10.13.1] — 2026-08-25 — Portable-mode fix (a regression in the previous release, caught before it mattered)
 
 We run an independent, adversarial review pass on our own changes
