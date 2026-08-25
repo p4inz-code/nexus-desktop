@@ -12,6 +12,19 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.13.1] — 2026-08-25 — Portable-mode fix (a regression in the previous release, caught before it mattered)
+
+We run an independent, adversarial review pass on our own changes
+before calling them done — a second pass that's told nothing about what
+the first pass concluded and tries to find what's actually wrong. This
+time it found a real one: v10.13.0 claimed portable mode no longer
+writes a registry entry on the host PC. It still did — one line of the
+fix was sitting outside the check that was supposed to guard it, so it
+ran unconditionally regardless of portable mode. Now genuinely fixed
+and re-verified. Also fixed: a minor resource-handling issue in the new
+tray icon code from the same release (low real-world impact, cleaned up
+anyway). No other functional changes.
+
 ## [10.13.0] — 2026-08-25 — Official brand identity
 
 Nexus now uses its real, official logo — everywhere. A generic padlock
