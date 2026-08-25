@@ -12,6 +12,24 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.13.0] — 2026-08-25 — Official brand identity
+
+Nexus now uses its real, official logo — everywhere. A generic padlock
+placeholder and a plain diamond glyph had been standing in for the
+actual mark since the very first release; this release replaces every
+instance of it with the real thing: the app icon, the system tray icon,
+the lock screen, splash screen, About screen, every window's title bar,
+and the banner on this README.
+
+While wiring it in, we also found and fixed a real pre-existing bug: the
+system tray icon has never actually been able to load from the file it
+was looking for (that file was never present in a real published
+build), so it silently showed a hand-drawn fallback the whole time
+regardless of what was in that file. It now pulls the icon straight
+from the app itself, which can't fail the same way.
+
+No functional/security changes in this release — purely visual identity.
+
 ## [10.12.9] — 2026-08-25 — Uninstaller correctness pass + auto-updater hardening
 
 Last release introduced Nexus's first real uninstaller (app + registry +
