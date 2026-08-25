@@ -43,12 +43,17 @@ Discord before any change takes effect. Nothing in this section constitutes
 a guarantee of any specific benefit.
 
 5. PRIVACY AND DATA
-Nexus operates entirely offline, with zero network calls of any kind. We
-collect no personal data, no telemetry, and no usage analytics through the
-application itself. Your files never leave your device. License key
-verification is performed locally on your machine — no server, no internet
-connection, ever. See PRIVACY.md for what limited information is collected
-during the manual beta-key issuance process (outside the application).
+Nexus is offline-first, with one real exception: the built-in update
+checker talks to GitHub directly (on by default, no Northbyte Studios
+server involved, and you can disable it anytime in Settings) to check for
+new releases. It sends nothing about you or your vault and downloads
+nothing unless you approve it. Beyond that one feature, Nexus makes zero
+network calls — encryption, decryption, and license-key verification all
+happen locally on your machine, with no server involved. We collect no
+personal data, no telemetry, and no usage analytics through the
+application itself. Your files never leave your device. See PRIVACY.md for
+what limited information is collected during the manual beta-key issuance
+process (outside the application).
 
 6. DISCLAIMER OF WARRANTY
 NEXUS IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,

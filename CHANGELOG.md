@@ -12,6 +12,17 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+## [10.14.0] — 2026-08-25 — License activation cleanup
+
+The activation screen no longer shows a beta-specific category label —
+it just asks for your license key. Also moved the revoked-key list from
+a hardcoded value in our own source code to a real exported file, so
+revoking a key no longer requires editing source code by hand. Fixed a
+stale line in LICENSE that still claimed zero network calls of any
+kind, inconsistent with PRIVACY.md/SECURITY.md's already-correct
+disclosure of the update checker. No change to how existing license
+keys validate.
+
 ## [10.13.2] — 2026-08-25 — Accessibility: screen-reader labels, contrast audit
 
 Icon-only buttons across the app — window close/minimize/maximize
