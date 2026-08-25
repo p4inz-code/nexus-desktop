@@ -7,9 +7,15 @@ issuing you a beta key).
 
 ## The application
 
-- **Zero network calls.** Nexus does not connect to the internet for any
-  reason. Encryption, decryption, and license-key verification all happen
-  locally on your machine.
+- **One real exception to "zero network calls," and it's the update
+  checker.** Nexus checks GitHub directly for new releases — on by
+  default, roughly 5 seconds after you unlock, unless you turn it off in
+  Settings. It talks to GitHub only (never a Northbyte Studios server),
+  sends nothing about you or your vault, and downloads nothing unless you
+  approve it (or you've explicitly switched Settings to auto-install).
+  Beyond that one feature, Nexus makes no other network calls: encryption,
+  decryption, and license-key verification all happen locally on your
+  machine, with no server involved.
 - **Zero telemetry.** No analytics, no crash reporting, no usage tracking,
   no "anonymous" diagnostics sent anywhere.
 - **No account.** There is nothing to sign up for and no server that knows

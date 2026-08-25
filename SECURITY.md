@@ -28,8 +28,11 @@ period.
 
 - **Encryption:** AES-256-GCM for vault contents.
 - **Key derivation:** Argon2id from your master password.
-- **Network:** Nexus makes zero network calls. Encryption, license
-  verification, and everything else happens entirely on your device.
+- **Network:** one real exception — the update checker talks to GitHub
+  directly (on by default, no Northbyte server involved, disable anytime
+  in Settings). Everything else — encryption, decryption, license-key
+  verification — happens entirely on your device with no network call
+  at all.
 - **Telemetry:** none. No analytics, no crash reporting, no phone-home of
   any kind.
 - **Account:** none required. There is no server holding your data or your
