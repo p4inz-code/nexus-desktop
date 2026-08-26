@@ -21,6 +21,29 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.16.0] — 2026-08-27: Rename the exe, hide from Apps & Features
+
+The start of a phase focused on reducing how easily Nexus can be spotted on
+a shared or borrowed PC, at a glance.
+
+Settings → Privacy has two new options. You can now rename the running
+Nexus.exe to a name of your choosing: it copies itself under the new name,
+relaunches, and cleans up the old file. This changes what Task Manager and
+Alt-Tab show immediately. It doesn't change the file description Windows
+shows in the exe's Properties dialog, since that's compiled in at build
+time; that's a candidate for a later update, not something a Settings
+toggle can do on its own.
+
+There's also a new toggle to remove Nexus from Windows Settings → Apps
+entirely. It's off by default, since turning it on means you can only
+uninstall Nexus from inside Nexus itself afterward, not from Windows'
+own list. The app tells you that plainly before you turn it on.
+
+Nexus's existing automatic cleanup of recent-files traces (already covering
+things like jump lists and thumbnail cache) now also clears itself from
+Windows' Activity History / Timeline feature, closing a real gap we found
+while reviewing what was and wasn't covered.
+
 ## [10.15.0] — 2026-08-26: Live-testing bug list, plus a real data-corruption fix caught by our own audit
 
 A large batch of fixes from live testing, worked through with our usual
