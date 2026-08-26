@@ -12,6 +12,15 @@ full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
 [Discord](https://discord.gg/8UKt8s5FbW).
 
+> **A note on what's actually downloadable right now:** this file lists
+> every real, committed change, but not every entry below has been packaged
+> into a tagged [Release](../../releases) yet — that happens after a final
+> round of hands-on testing on each batch. **v10.12.5 is the newest version
+> you can actually download today.** Entries above v10.12.5 describe real
+> changes already in our source tree, not vaporware, just not released yet.
+> See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
+> v10.12.5 build specifically.
+
 ## [10.14.0] — 2026-08-25 — License activation cleanup
 
 The activation screen no longer shows a beta-specific category label —
