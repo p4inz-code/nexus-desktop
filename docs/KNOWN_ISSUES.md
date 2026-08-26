@@ -48,9 +48,11 @@ know these are real, not hypothetical:
   vault folder afterward rather than trusting either feature alone.
 - **Decoy password isn't fully isolated from the real vault.** On v10.12.5, a
   decoy password can be used to change the real password (locking the real
-  owner out) or to generate a real recovery phrase. If you use decoy mode for
-  plausible deniability, treat it as not yet safe against a technical user on
-  this specific version.
+  owner out), to generate a real recovery phrase, or to trigger Panic Wipe
+  (Ctrl+Shift+W) against your REAL vault instead of doing nothing — Panic
+  Wipe has zero confirmation by design, so this can happen with a single
+  keystroke. If you use decoy mode for plausible deniability, treat it as
+  not yet safe against a technical user on this specific version.
 - **Windows Hello convenience-unlock stores your master password with a
   weaker barrier than intended** — another process running as the same
   Windows user could potentially recover it. If you use Hello unlock,
