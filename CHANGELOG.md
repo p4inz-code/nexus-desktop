@@ -21,6 +21,24 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.14.3] — 2026-08-26 — Print Screen fixed (real root cause), key display fidelity
+
+More issues found in the same live-testing session:
+
+- Pasting a license key now shows back exactly what you pasted, including
+  a legacy-format key's old prefix — the previous fix stopped it from
+  losing characters, but it was still silently rewriting what was
+  displayed.
+- **Root-caused and fixed "Print Screen does nothing."** Not a Streamer
+  Mode bug — a clipboard-protection feature was, in some cases, wiping out
+  a screenshot within about two seconds of it being taken, if you'd
+  recently copied something else from Nexus (a password, anything from
+  your vault). It no longer touches clipboard content that isn't its own.
+- Closed a related gap found during that investigation: the global
+  "Show Nexus" hotkey could previously be set to a single key with no
+  modifier. Now requires Ctrl, Shift, or Alt, same as any standard custom
+  hotkey.
+
 ## [10.14.2] — 2026-08-26 — Real bugs found in early live-testing
 
 Found within minutes of live-testing v10.14.1 starting. Two real, confirmed
