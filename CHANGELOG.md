@@ -21,6 +21,23 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.17.0] — 2026-08-27: Camouflage phase 1, finished
+
+The rename feature from the last update only changed the file itself. The
+taskbar, Alt-Tab switcher, and the tray icon's tooltip and menu kept saying
+"Nexus" regardless. All of that now follows your chosen name too.
+
+We also went back and actually tested the automatic trace cleanup features
+against real, disposable test data (registry entries, files, and a mock
+activity-history database) rather than just reading the code and assuming
+it works. Everything checked out.
+
+One thing we looked into and didn't ship: customizing the file description
+shown in the exe's Properties dialog. It turns out that field, along with a
+few others, has been blank on every build so far due to an unrelated build
+setting, not filled with "Nexus" as we'd assumed. There wasn't anything
+there left to change.
+
 ## [10.16.0] — 2026-08-27: Rename the exe, hide from Apps & Features
 
 The start of a phase focused on reducing how easily Nexus can be spotted on
