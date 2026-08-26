@@ -1,14 +1,14 @@
 # Privacy Policy
 
 Nexus is built around a simple principle: your data should never leave your
-device. This document explains exactly what is, and isn't, collected — both
+device. This document explains exactly what is, and isn't, collected, both
 by the application itself and by the manual processes around it (like
 issuing you a beta key).
 
 ## The application
 
 - **One real exception to "zero network calls," and it's the update
-  checker.** Nexus checks GitHub directly for new releases — on by
+  checker.** Nexus checks GitHub directly for new releases. It's on by
   default, roughly 5 seconds after you unlock, unless you turn it off in
   Settings. It talks to GitHub only (never a Northbyte Studios server),
   sends nothing about you or your vault, and downloads nothing unless you
@@ -47,7 +47,7 @@ without one.
 
 - We don't track you across sessions, devices, or the web.
 - We don't build a profile of you or your usage.
-- We don't share any information with advertisers — there are no ads in
+- We don't share any information with advertisers. There are no ads in
   Nexus, and there will not be.
 
 ## Changes to this policy

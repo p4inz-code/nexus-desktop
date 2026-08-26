@@ -6,7 +6,7 @@ spirit of [Keep a Changelog](https://keepachangelog.com/), and Nexus follows
 feature, `vX.0.0` = major overhaul.
 
 Nexus was developed privately through an extended internal beta before its
-public debut — this changelog starts at that public debut and will be kept
+public debut. This changelog starts at that public debut and will be kept
 current with every release going forward. It intentionally doesn't dump the
 full internal development history (hundreds of incremental dev builds); if
 you want that level of detail for a specific change, ask on
@@ -14,7 +14,7 @@ you want that level of detail for a specific change, ask on
 
 > **A note on what's actually downloadable right now:** this file lists
 > every real, committed change, but not every entry below has been packaged
-> into a tagged [Release](../../releases) yet — that happens after a final
+> into a tagged [Release](../../releases) yet. That happens after a final
 > round of hands-on testing on each batch. **v10.12.5 is the newest version
 > you can actually download today.** Entries above v10.12.5 describe real
 > changes already in our source tree, not vaporware, just not released yet.

@@ -10,7 +10,7 @@ template. This is the best channel for anything you'd want tracked or that
 other users might hit too.
 
 Before filing, please check [Known Issues](docs/KNOWN_ISSUES.md) and
-[Troubleshooting](docs/TROUBLESHOOTING.md) — your issue might already be a
+[Troubleshooting](docs/TROUBLESHOOTING.md): your issue might already be a
 known one with a documented workaround.
 
 ## License keys & activation
@@ -37,4 +37,4 @@ Do **not** open a public issue for a security vulnerability. See
 
 We aim to respond within 48 hours, as committed in the
 [license agreement](LICENSE). There's no phone support, and support is
-provided on a best-effort basis by one person — thanks for your patience.
+provided on a best-effort basis by one person. Thanks for your patience.

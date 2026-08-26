@@ -23,13 +23,13 @@ access to this software.
 3. FREE BETA PROGRAM
 Nexus is currently provided free of charge during the public beta phase
 (2026). Access requires a license key issued directly by Northbyte Studios
-via Discord or email — there is no payment platform and no automated
+via Discord or email; there is no payment platform and no automated
 purchase. Keys are non-transferable and bound to a single user. We reserve
 the right to revoke any key found to be shared, leaked, or distributed
 publicly. Beta access does not guarantee continued free access after the
-beta period ends — see Section 4.
+beta period ends (see Section 4).
 
-The first 20–30 active beta testers may, at Northbyte Studios' sole
+The first 20 to 30 active beta testers may, at Northbyte Studios' sole
 discretion, receive a complimentary lifetime license. This is a discretionary
 gesture of appreciation, not a formal program, and carries no guaranteed
 terms, eligibility criteria, or entitlement.
@@ -38,7 +38,7 @@ terms, eligibility criteria, or entitlement.
 Northbyte Studios plans to introduce a paid version of Nexus after the beta
 period concludes. Beta users may be offered preferential terms at the
 discretion of Northbyte Studios, which may include a discount, an extended
-free period, or continued free access — exact terms will be communicated via
+free period, or continued free access. Exact terms will be communicated via
 Discord before any change takes effect. Nothing in this section constitutes
 a guarantee of any specific benefit.
 
@@ -48,7 +48,7 @@ checker talks to GitHub directly (on by default, no Northbyte Studios
 server involved, and you can disable it anytime in Settings) to check for
 new releases. It sends nothing about you or your vault and downloads
 nothing unless you approve it. Beyond that one feature, Nexus makes zero
-network calls — encryption, decryption, and license-key verification all
+network calls: encryption, decryption, and license-key verification all
 happen locally on your machine, with no server involved. We collect no
 personal data, no telemetry, and no usage analytics through the
 application itself. Your files never leave your device. See PRIVACY.md for
@@ -68,7 +68,7 @@ damages, or any loss of data, profits, or revenues, arising from your use of
 Nexus. Since Nexus is provided free of charge during the beta period, our
 total liability is limited to zero. You are solely responsible for backing
 up your vault data. We strongly recommend storing your master password and
-recovery phrase securely — there is no password recovery beyond the
+recovery phrase securely. There is no password recovery beyond the
 recovery mechanisms built into the app, and no server-side reset is
 possible.
 

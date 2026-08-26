@@ -1,12 +1,12 @@
 # Roadmap
 
 Nexus is built by a solo developer. This roadmap is directional, not a
-promise with dates — priorities can and will shift based on beta feedback.
+promise with dates. Priorities can and will shift based on beta feedback.
 
 ## Now: Public Beta
 
 Nexus is in active public beta. `v10.9.1` was the first public tag; the
-current line has continued through security and stability work — see the
+current line has continued through security and stability work. See the
 [Changelog](CHANGELOG.md) for what shipped when. Immediate focus:
 
 - Continue closing beta feedback quickly. Stability and correctness fixes
@@ -18,12 +18,12 @@ current line has continued through security and stability work — see the
 
 ## Next
 
-- Work through beta feedback and stability issues as they come in — this is
+- Work through beta feedback and stability issues as they come in. This is
   the priority over new features until the beta feels solid.
 - Continue closing gaps between the current UI and the intended design
   across any screens not yet re-verified.
 - Evaluate code signing once there's a sustainable path to afford an EV
-  certificate — this removes the SmartScreen warning at first run.
+  certificate. This removes the SmartScreen warning at first run.
 
 ## Later: Paid Version
 
@@ -33,14 +33,14 @@ current line has continued through security and stability work — see the
   supporters at Northbyte Studios' discretion.
 - Server-side license verification returns at this stage (the current
   offline verification is intentionally minimal-trust, appropriate for a
-  free beta — see
+  free beta; see
   [Known limitations](SECURITY.md#known-limitations-disclosed-not-hidden)
   in our security policy).
 
 ## Not currently planned
 
-- Cloud sync or any server-hosted component — Nexus's whole value
-  proposition is staying offline. This isn't likely to change.
+- Cloud sync or any server-hosted component. Nexus's whole value
+  proposition is staying offline, and this isn't likely to change.
 - macOS, Linux, or mobile builds. Windows-only for the foreseeable future.
 
 ## Feedback shapes this list
