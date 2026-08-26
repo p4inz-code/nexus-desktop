@@ -32,6 +32,42 @@ some media viewers and the deeper Settings panels — haven't had the same
 pass yet. They work; they just haven't been re-verified against the current
 design.
 
+## Real bugs, already fixed in source, not in the current download yet
+
+The build currently available on [Releases](../../../releases) is **v10.12.5**.
+Several real bugs were found and fixed after that in our own audits, but
+haven't been packaged into a new tagged release yet — that happens after a
+final round of hands-on testing. Until then, anyone running v10.12.5 should
+know these are real, not hypothetical:
+
+- **Factory Reset and Panic Wipe (Ctrl+Shift+W) don't fully wipe your vault.**
+  Factory Reset runs its confirmation flow but doesn't actually clear
+  everything, and Panic Wipe never touches the main database file at all —
+  so credentials, journal entries, and other data can survive a "reset."
+  If you need to actually destroy vault data on v10.12.5, manually delete the
+  vault folder afterward rather than trusting either feature alone.
+- **Decoy password isn't fully isolated from the real vault.** On v10.12.5, a
+  decoy password can be used to change the real password (locking the real
+  owner out) or to generate a real recovery phrase. If you use decoy mode for
+  plausible deniability, treat it as not yet safe against a technical user on
+  this specific version.
+- **Windows Hello convenience-unlock stores your master password with a
+  weaker barrier than intended** — another process running as the same
+  Windows user could potentially recover it. If you use Hello unlock,
+  updating to the next release (once tagged) is worth doing sooner rather
+  than later.
+- **A failed Anti-Tamper or lock trigger can silently not lock the vault**,
+  due to a missing error handler in the lock sequence — the screen may stay
+  unlocked when it should have locked.
+- **Portable mode still leaves some trace on the host PC** — an Add/Remove
+  Programs entry can get registered even when running from a USB drive,
+  contrary to what portable mode is supposed to guarantee.
+
+All of the above are fixed in source and compiled clean; none have had a
+real-machine functional re-test yet, which is why they're not tagged as a
+release. Full technical detail lives in this repo's internal audit history
+(not published) — ask if you want the complete list.
+
 ## By design, not a bug
 
 - **Windows SmartScreen warning on first run** — Nexus isn't code-signed

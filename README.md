@@ -12,7 +12,7 @@
 
 **An offline-first, encrypted file vault for Windows.**
 
-Nexus keeps your files, notes, credentials, and personal data behind strong local encryption — no cloud, no account, no telemetry. Everything happens on your machine.
+Nexus keeps your files, notes, credentials, and personal data behind strong local encryption — no cloud, no account, no telemetry. Encryption, decryption, and license verification all happen on your machine — the one exception is an optional update checker; see [Privacy](PRIVACY.md).
 
 > **Status: Public Beta.** Nexus is actively developed by a solo indie developer. It's real software people use, not a demo — but the beta label is on it for a reason. See [Known Issues](docs/KNOWN_ISSUES.md) for the current honest list, and please [report anything that breaks](#support--feedback).
 
@@ -20,7 +20,7 @@ Nexus keeps your files, notes, credentials, and personal data behind strong loca
 
 ## Screenshots
 
-Real frames from the v11 UI, not concept art.
+Real frames from the current UI, not concept art.
 
 <p align="center">
   <img src="assets/screenshots/lock-screen.png" alt="Nexus lock screen — split brand and master password entry with trust chips for AES-256-GCM, zero telemetry, offline-first, anti-tamper" width="100%">
@@ -81,7 +81,7 @@ The first 20–30 active beta testers may receive a complimentary lifetime licen
 ## Security model
 
 - **AES-256-GCM** for vault encryption, **Argon2id** for master-password key derivation.
-- Fully offline — encryption and license verification both happen locally, with zero network calls.
+- Offline-first — encryption, decryption, and license verification all happen locally. The one exception is an optional update checker (GitHub only, no Northbyte Studios server, on by default, can be turned off in Settings) — see [Privacy](PRIVACY.md).
 - No account, no server-side anything.
 
 Nexus is closed-source. This repository hosts release binaries, documentation, and issue tracking — not the application source.
