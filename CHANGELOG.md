@@ -21,6 +21,22 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.14.2] — 2026-08-26 — Real bugs found in early live-testing
+
+Found within minutes of live-testing v10.14.1 starting. Two real, confirmed
+fixes:
+
+- Pasting a full license key (one still using the old "NXBT-" prefix format)
+  could silently lose characters and fail to activate, even for a genuinely
+  valid key. Typing a key by hand, or pasting a newer-format key, was never
+  affected.
+- Uninstalling Nexus now checks whether it's still running first, and the
+  "remove Nexus.exe" step during uninstall has been replaced with a
+  mechanism that's actually confirmed to work — the previous one relied on
+  a Windows privilege a normal (non-admin) install doesn't have, so it had
+  likely never actually cleaned up the exe file despite always reporting
+  success.
+
 ## [10.14.1] — 2026-08-26 — Security hardening + accessibility round 2
 
 A focused hardening pass, the last of a multi-session security audit before
