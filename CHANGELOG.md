@@ -21,6 +21,39 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.15.0] — 2026-08-26: Live-testing bug list, plus a real data-corruption fix caught by our own audit
+
+A large batch of fixes from live testing, worked through with our usual
+research-then-fix method and an independent adversarial review of the
+changes before shipping. Some highlights:
+
+Color tags saved correctly all along but only showed up in Grid view, not
+List view (the default). Fixed. Secure Notes' Markdown preview toggle threw
+an error on the second click, and the Delete button could be pushed
+off-screen by an overflowing toolbar with no way to reach it. Both fixed.
+
+The adversarial review caught something worth calling out on its own: a
+pre-existing bug (not introduced by this batch) where opening Advanced
+Settings silently reset your Lock Screen Style back to "Default" every
+time, regardless of what you'd actually chosen. Fixed.
+
+Also: the video and audio players now explain clearly when a file can't be
+decoded (usually a missing codec, not a broken file) and offer to open it
+in your system's default player instead. An unsupported audio file used to
+fail with no error at all. Setup now asks what to call you (optional) and
+greets you by name and time of day. Four themes that existed in the app but
+had no way to select them (Ocean, Slate, Emerald, Coral) are now in the
+Appearance panel. Borders across every theme were hard to see and are now
+brighter. The brand mark has a subtle animation on the About page and lock
+screen instead of sitting static.
+
+Streamer Mode's Print Screen exclusion was independently re-verified with a
+real capture test rather than re-guessed at. The underlying mechanism and
+its coverage across every window in the app both check out.
+
+Full detail on all of it, including what was investigated and found to
+already be working correctly, is in the project's internal release notes.
+
 ## [10.14.4] — 2026-08-26: Print Screen's real, complete root cause
 
 The previous release fixed a real bug (a clipboard-protection feature
