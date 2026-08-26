@@ -21,6 +21,34 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.14.1] — 2026-08-26 — Security hardening + accessibility round 2
+
+A focused hardening pass, the last of a multi-session security audit before
+real-machine testing begins. Highlights:
+
+- Fixed a timing side-channel that let anyone determine whether a decoy
+  password was configured, just by timing a single unlock attempt.
+- The vault master password no longer sits as a plain string in memory for
+  the whole time your vault is unlocked — it's now kept somewhere Windows
+  won't page to disk, and is properly wiped on lock.
+- The settings file (cfg.dat) no longer shares one encryption key across
+  every install of Nexus ever shipped — each install now gets its own,
+  generated automatically, no action needed.
+- Fixed a real bug where Panic Wipe (Ctrl+Shift+W), triggered from a decoy
+  session, could destroy your real vault instead of doing nothing.
+- Fixed a gap where hovering over a honeypot bait file (vs. opening it)
+  didn't trigger the intrusion alert.
+- Hardened a video-preview temp file that was leaving decrypted bytes in a
+  shared, unmanaged location.
+- Removed a whole dead, unreachable window that carried a weaker lock path
+  than the one actually in use.
+- More accessibility fixes: the main window now has a proper title and
+  correct keyboard tab order, and roughly a dozen more icon-only buttons
+  across the app now have real screen-reader names.
+
+See [Known Issues](docs/KNOWN_ISSUES.md) — none of this is live-tested yet,
+so it's not in a tagged release until that happens.
+
 ## [10.14.0] — 2026-08-25 — License activation cleanup
 
 The activation screen no longer shows a beta-specific category label —
