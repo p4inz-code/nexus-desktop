@@ -21,7 +21,22 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
-## [10.14.3] — 2026-08-26 — Print Screen fixed (real root cause), key display fidelity
+## [10.14.4] — 2026-08-26: Print Screen's real, complete root cause
+
+The previous release fixed a real bug (a clipboard-protection feature
+wiping out unrelated content, including screenshots). It turned out not to
+be the whole story. The actual complete cause: the global "Show Nexus"
+hotkey could get stuck bound to a bare, unmodified key, including Print
+Screen itself, silently claiming it system-wide and blocking Windows' own
+screenshot handling entirely. Fixed at the source, and self-healing: an
+existing bad configuration corrects itself automatically on next launch.
+
+Also added: launching Nexus while it's already running now brings the
+existing instance to the foreground directly, instead of showing a
+dead-end "already running" message with no way back in short of ending
+the process.
+
+## [10.14.3] — 2026-08-26: Print Screen fixed (real root cause), key display fidelity
 
 More issues found in the same live-testing session:
 
