@@ -69,6 +69,11 @@ match, don't run the file, and let us know.
   is proportionate to a free beta with nothing to steal; proper
   server-backed verification is planned for the paid version (see
   [Roadmap](ROADMAP.md)).
-- There is no cloud backup or password reset. Losing your master password
-  and recovery phrase means losing your vault. This is a deliberate
-  trade-off of an offline-only design, not a bug.
+- There is no cloud backup or server-side password reset. The 24-word
+  recovery phrase generated at setup can get you back into a locked-out
+  app, but it does not fully recover your data: recovering resets the
+  login gate, and files added before the recovery no longer appear in the
+  vault afterward (the app discloses this at the moment of recovery). If
+  you lose both your master password and your recovery phrase, there is no
+  way back in at all. This is a deliberate trade-off of an offline-only
+  design, not a bug.

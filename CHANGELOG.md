@@ -21,6 +21,33 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.17.2] — 2026-08-27: Locking didn't close everything, and restore didn't restore
+
+An internal audit pass this session found and fixed four real, mostly
+severe bugs:
+
+- **Locking the vault didn't close other open windows.** An open video or
+  audio player, the Advanced Settings window, or a file viewer could stay
+  fully visible and interactive after locking — the vault itself was
+  locked, but whatever else was open wasn't. Locking now closes every
+  other open window at the same moment.
+- **Auto-Lock never actually tracked activity**, despite being labeled
+  "locks after N minutes of inactivity" since it shipped — it was really a
+  fixed timer from your last unlock, so it could lock you out mid-task
+  while you were actively using the app. It now resets on real mouse and
+  keyboard activity, the way it was always supposed to.
+- **Restoring a backup silently did nothing.** Restored files were written
+  to disk but never actually registered anywhere the app reads from, so
+  nothing ever reappeared after a restore — while it reported success
+  anyway. This is now fixed and verified with a real round-trip test, not
+  just a code read-through.
+- **A "Generate New Key" button could silently break your real recovery
+  phrase.** It used a different, incompatible system that saved to the
+  same place your real 24-word recovery phrase lives, silently
+  overwriting it with something the actual "forgot password" screen could
+  never check. It now uses the same recovery system everywhere, so
+  there's only one, and it always works.
+
 ## [10.17.1] — 2026-08-27: A build setting fixed, not just documented
 
 The last update mentioned a build setting that had been left disabled for a
