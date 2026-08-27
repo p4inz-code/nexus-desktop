@@ -21,6 +21,14 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.17.4] — 2026-08-27: Hardened Auto-Lock's new activity tracking
+
+A self-review pass on the last two updates found a narrow edge case:
+depending on internal timing, one or two specific keyboard shortcuts could
+have failed to reset the Auto-Lock timer even though they counted as
+activity. Hardened so activity tracking always registers, no matter what.
+No visible change for most people — this is a reliability fix.
+
 ## [10.17.3] — 2026-08-27: Undo/redo rename wasn't actually saving
 
 Found while checking for other places with the same bug behind the restore
