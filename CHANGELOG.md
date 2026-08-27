@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.17.1] — 2026-08-27: A build setting fixed, not just documented
+
+The last update mentioned a build setting that had been left disabled for a
+while to avoid a compiler crash, which is why the exe's Properties dialog
+in Windows had blank fields instead of a real file description. Rather than
+leave that as a known limitation, we went back and actually tested whether
+the crash still happens. It doesn't. Re-enabled the setting, ran it through
+several clean builds to be sure, and confirmed nothing else depends on the
+old behavior. Nexus.exe now shows a proper description, product name, and
+version number in its file properties.
+
 ## [10.17.0] — 2026-08-27: Camouflage phase 1, finished
 
 The rename feature from the last update only changed the file itself. The
