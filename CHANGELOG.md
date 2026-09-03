@@ -21,6 +21,22 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.0] — 2026-08-27: Advanced Settings moved into the main window
+
+- **Advanced Settings is no longer a separate pop-up.** Password change,
+  decoy password, recovery key, factory reset, and the rest now open
+  right inside the main window, matching every other section of Nexus.
+- **Image Viewer's bottom thumbnail strip — removed.** It looked like a
+  video scrubber but didn't act like one. Zoom now uses a real slider,
+  and Fit/Fill are genuine separate view modes instead of one button.
+- **Audio Player now shows album art** — a gradient placeholder above the
+  track name, instead of leaving that space blank.
+- **Decoy sessions can no longer leak settings into your real vault.** A
+  decoy session used to share the exact same settings file as your real
+  vault — any setting changed in decoy mode could silently affect your
+  real vault. Decoy sessions now get their own copy that's never saved
+  to disk.
+
 ## [10.17.4] — 2026-08-27: Hardened Auto-Lock's new activity tracking
 
 A self-review pass on the last two updates found a narrow edge case:
