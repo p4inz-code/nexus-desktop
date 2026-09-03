@@ -21,6 +21,25 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.1] — 2026-08-27: Real live-testing fixes
+
+Found by actually using v10.18.0, not internal testing:
+
+- **A rare false "Vault seal mismatch" warning — fixed.** If a file
+  expired and was auto-deleted at the exact same moment Nexus checked
+  the vault's integrity on unlock, the check could briefly collide with
+  that deletion and wrongly report it as tampering. It now waits a beat
+  and tries again, which reliably avoids the collision.
+- **Secure Notes: Delete button is always visible now**, not just
+  technically reachable by scrolling a toolbar with no hint that it
+  scrolls.
+- **Text Size now actually changes something.** It previously only
+  updated a live preview on the Settings page itself and nothing else in
+  the app — now it scales the whole interface for real.
+- **Appearance settings consolidated into one place** — Accent Color
+  moved out of Advanced Settings and into Settings → Appearance,
+  alongside Theme and Text Size where it belongs.
+
 ## [10.18.0] — 2026-08-27: Advanced Settings moved into the main window
 
 - **Advanced Settings is no longer a separate pop-up.** Password change,
