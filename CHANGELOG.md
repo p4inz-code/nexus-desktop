@@ -21,6 +21,15 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.2] — 2026-08-27: Security fix — Credentials password field wasn't masked
+
+Found by an internal bug-bounty pass, not externally reported:
+
+- **Credentials manager's Add/Edit Login password field was never actually
+  masked — it showed passwords in plain, readable text.** The field was
+  meant to use a masked input, but the masking flag it relied on was never
+  wired up to anything. Fixed with a real masked password field.
+
 ## [10.18.1] — 2026-08-27: Real live-testing fixes
 
 Found by actually using v10.18.0, not internal testing:
