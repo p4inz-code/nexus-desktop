@@ -64,6 +64,18 @@ know these are real, not hypothetical:
 - **Portable mode still leaves some trace on the host PC**: an Add/Remove
   Programs entry can get registered even when running from a USB drive,
   contrary to what portable mode is supposed to guarantee.
+- **Credentials manager's password field wasn't actually masked.** The
+  Add/Edit Login screen in Credentials was supposed to hide the password
+  as you typed it — the masking never actually worked, and it displayed
+  in plain, readable text the entire time this feature has existed.
+  Anyone who could see your screen while adding or editing a saved login
+  on v10.12.5 could read the password directly.
+- **Decoy mode could show a technical database warning that gives it
+  away.** On top of the decoy-isolation gaps already listed above, doing
+  almost anything in a decoy session (opening a file, importing
+  something, even just visiting the Activity Log) could pop a
+  "DB decrypt failed — wrong password" warning — a clear tell that
+  something's off, directly undercutting the point of decoy mode.
 
 All of the above are fixed in source and compiled clean; none have had a
 real-machine functional re-test yet, which is why they're not tagged as a
