@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.4] — 2026-08-27: Security fix — Activity Log export left a plaintext copy behind
+
+Found by the same internal bug-bounty pass:
+
+- **Exporting the Activity Log to an encrypted file left an unshredded
+  plaintext copy on disk.** The encrypted output itself was correct, but
+  the temporary plaintext file used to build it was only regular-deleted
+  afterward — recoverable with basic undelete tools, defeating the point
+  of encrypting the export. It's now securely wiped (multi-pass overwrite)
+  like every other temporary file in Nexus.
+
 ## [10.18.3] — 2026-08-27: Fixed a memory leak in the floating Scratch Pad
 
 Found by the same internal bug-bounty pass:
