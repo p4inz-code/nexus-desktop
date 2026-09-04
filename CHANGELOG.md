@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.7] — 2026-08-27: Hardening — Audio Player start-index bounds-checking
+
+Found by the same internal bug-bounty pass:
+
+- **Audio Player's starting track index wasn't bounds-checked** the way
+  the Video Player's already was. Not reachable through normal use today
+  — the one real code path that opens the Audio Player always passes a
+  valid index — but hardened to match the Video Player's existing safety
+  check and protect against any future caller passing a bad value.
+
 ## [10.18.6] — 2026-08-27: Security fix — Text Viewer's Copy All didn't auto-clear the clipboard
 
 Found by the same internal bug-bounty pass:
