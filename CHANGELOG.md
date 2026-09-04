@@ -21,6 +21,14 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.8] — 2026-08-27: Cleanup — removed a dead, unused dialog class
+
+Found by the same internal bug-bounty pass:
+
+- **Removed `VideoOpenDialog`, a leftover dialog class with zero call
+  sites anywhere in the app.** No user-facing change — `OpenWithDialog`
+  is the real, live dialog shown when opening a file outside Nexus.
+
 ## [10.18.7] — 2026-08-27: Hardening — Audio Player start-index bounds-checking
 
 Found by the same internal bug-bounty pass:
