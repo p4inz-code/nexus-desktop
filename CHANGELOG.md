@@ -21,6 +21,18 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.10] — 2026-09-04: Security fix — honeypot alert file was stored in plain text
+
+Found by the same internal bug-bounty pass:
+
+- **The alert Nexus stores when a bait file is accessed was written in
+  plain text.** The exact same event is already encrypted in the
+  intruder log — this second copy, meant only to show you the alert on
+  your next real unlock, wasn't. Anyone with filesystem access to the
+  same Windows user account could have read the bait filename and
+  timestamp directly. Now encrypted the same way the intruder log
+  already is.
+
 ## [10.18.9] — 2026-08-27: Security fix — decoy mode could show a suspicious database warning
 
 Found by the same internal bug-bounty pass — the most severe finding of
