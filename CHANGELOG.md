@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.3] — 2026-08-27: Fixed a memory leak in the floating Scratch Pad
+
+Found by the same internal bug-bounty pass:
+
+- **Scratch Pad leaked its window on every open/close.** Closing and
+  reopening the floating Scratch Pad never released the previous window
+  from memory — a missed event-unsubscribe kept it alive for the rest of
+  the session, every single time. Fixed. No data was exposed by this (the
+  leaked window's text was already cleared), just wasted memory over a
+  long session.
+
 ## [10.18.2] — 2026-08-27: Security fix — Credentials password field wasn't masked
 
 Found by an internal bug-bounty pass, not externally reported:
