@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.5] — 2026-08-27: Security fix — recovery phrase copy didn't auto-clear the clipboard
+
+Found by the same internal bug-bounty pass:
+
+- **Copying your recovery phrase to the clipboard left it there
+  indefinitely.** Every other sensitive copy action in Nexus (passwords,
+  TOTP codes, saved URLs) auto-clears the clipboard a short time after
+  copying — the recovery-phrase copy button, the most sensitive of all,
+  was missing that same protection. Fixed.
+
 ## [10.18.4] — 2026-08-27: Security fix — Activity Log export left a plaintext copy behind
 
 Found by the same internal bug-bounty pass:
