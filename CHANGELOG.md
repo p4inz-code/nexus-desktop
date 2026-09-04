@@ -21,6 +21,18 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.11] — 2026-09-04: Security fix — anti-keylogger defense only covered half of every keystroke
+
+Found by the same internal bug-bounty pass:
+
+- **The anti-keylogger protection for the password field only intercepted
+  key-down events — key-up events passed through unprotected.** A
+  keylogger that also hooks key-up events (a common pattern) would still
+  see the real keystroke despite the defense being active. Both halves
+  of each keystroke are now covered. Not live-tested from this
+  environment — see [Known Issues](docs/KNOWN_ISSUES.md) for why, and
+  what still needs a hands-on check.
+
 ## [10.18.10] — 2026-09-04: Security fix — honeypot alert file was stored in plain text
 
 Found by the same internal bug-bounty pass:

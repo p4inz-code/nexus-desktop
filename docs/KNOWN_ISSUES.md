@@ -22,6 +22,17 @@ proves it:
 - **Forgot Password end-to-end**: recovery phrase and machine-bypass paths
   both work individually; the full end-to-end run-through together hasn't
   been formally exercised yet.
+- **Anti-keylogger key-up fix (v10.18.11)**: the fix itself is a small,
+  symmetric extension of an already-working mechanism (the code that
+  handles key-up events now mirrors the existing key-down code exactly),
+  but it hasn't been confirmed against a real keyboard yet. The one thing
+  worth checking on real hardware: type normally into the Credentials
+  password field with the shield active and confirm nothing feels off
+  (no stuck keys, no dropped or duplicated characters). We didn't test
+  this live ourselves — installing and driving a system-wide keyboard
+  hook from an automated environment with nobody at the keyboard to
+  notice if something goes wrong isn't a risk worth taking for a
+  developer-side check that a human can do safely in seconds.
 
 ## Not yet fully audited against the intended design
 
