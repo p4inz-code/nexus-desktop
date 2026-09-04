@@ -21,6 +21,21 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.9] — 2026-08-27: Security fix — decoy mode could show a suspicious database warning
+
+Found by the same internal bug-bounty pass — the most severe finding of
+this batch:
+
+- **Decoy mode could pop a "DB decrypt failed — wrong password" warning
+  on the very first file action.** The Activity Log's internal retry
+  logic for its own database connection didn't know about decoy
+  sessions, so it attempted to open the real, main vault database using
+  the decoy password — which always fails, and surfaced a technical
+  warning to the user. A decoy vault is supposed to look and behave like
+  a completely normal, self-contained vault; this was a real, visible
+  tell that something was wrong. Fixed — decoy sessions now correctly
+  skip this retry entirely, same as every other vault feature.
+
 ## [10.18.8] — 2026-08-27: Cleanup — removed a dead, unused dialog class
 
 Found by the same internal bug-bounty pass:
