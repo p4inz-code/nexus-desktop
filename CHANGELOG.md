@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.6] — 2026-08-27: Security fix — Text Viewer's Copy All didn't auto-clear the clipboard
+
+Found by the same internal bug-bounty pass:
+
+- **Copying a whole text file's contents from the built-in Text Viewer
+  left it on the clipboard indefinitely.** Every other copy of
+  vault-stored content in Nexus (passwords, saved URLs, contact details)
+  already auto-clears the clipboard a short time after copying — this
+  one didn't. Fixed for consistency.
+
 ## [10.18.5] — 2026-08-27: Security fix — recovery phrase copy didn't auto-clear the clipboard
 
 Found by the same internal bug-bounty pass:
