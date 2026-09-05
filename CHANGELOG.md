@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.18] — 2026-09-05: Fix — vault health score leaked info in decoy mode
+
+Found by the same internal bug-bounty pass:
+
+- **The Vault Health Score ring (Dashboard and Security page) could
+  reveal whether your real vault had been security-scanned before**,
+  and separately capped every decoy session's score by 20 points for
+  no real reason, both while unlocked with your decoy password. Fixed
+  — both factors now behave the same way the rest of the score already
+  did in decoy mode.
+
 ## [10.18.17] — 2026-09-05: Hardening — closed a second decoy-mode data path
 
 Found by the same internal bug-bounty pass as v10.18.16, a defense-in-
