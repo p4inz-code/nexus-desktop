@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.12] — 2026-09-04: Stability fix — lock could misbehave after many unlocks in one session
+
+Found by the same internal bug-bounty pass:
+
+- **A few internal event hookups on the main window weren't being
+  cleaned up when the vault locked.** In a long-running session with
+  many unlock/lock cycles, this could make a real threat-detection lock
+  (Anti-Tamper) misfire against leftover window state instead of
+  locking cleanly. Fixed — everything is now properly cleaned up on
+  every lock, no matter how many times you've unlocked in that session.
+
 ## [10.18.11] — 2026-09-04: Security fix — anti-keylogger defense only covered half of every keystroke
 
 Found by the same internal bug-bounty pass:
