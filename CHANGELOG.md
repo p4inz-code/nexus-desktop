@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.15] — 2026-09-05: Security fix — decoy mode could show a false tampering warning
+
+Found by the same internal bug-bounty pass:
+
+- **Unlocking with your decoy password could show a scary "vault
+  content has changed" warning**, if you'd ever run a security scan on
+  your real vault. It was a false alarm — comparing an empty decoy view
+  against your real vault's actual saved seal — but it looked exactly
+  like a tampering warning on what's supposed to look like an ordinary
+  vault. This check is now correctly skipped during decoy sessions.
+
 ## [10.18.14] — 2026-09-05: Bug fix — internal edge case in secure memory handling
 
 Found by the same internal bug-bounty pass:
