@@ -21,6 +21,15 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.19] — 2026-09-05: Fix — two database writes weren't reliably saved
+
+Found by the same internal bug-bounty pass:
+
+- **Marking a corrupted file, and trimming the activity log to its size
+  limit, could both be silently lost** if the app closed right after
+  either one happened, since neither triggered the usual immediate save
+  to disk. Both now save right away, like every other database change.
+
 ## [10.18.18] — 2026-09-05: Fix — vault health score leaked info in decoy mode
 
 Found by the same internal bug-bounty pass:
