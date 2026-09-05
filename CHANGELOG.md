@@ -21,6 +21,17 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.20] — 2026-09-05: Security fix — machine ID could collide across unrelated machines
+
+Found by the same internal bug-bounty pass:
+
+- **The hardware ID used to bind a license or bypass key to a specific
+  PC could end up identical across multiple machines**, on any machine
+  where a background hardware lookup ran slowly enough to time out —
+  the fallback that's supposed to keep it unique wasn't triggering
+  correctly in that case. Fixed so the fallback always kicks in
+  properly, restoring the "this only works on your machine" guarantee.
+
 ## [10.18.19] — 2026-09-05: Fix — two database writes weren't reliably saved
 
 Found by the same internal bug-bounty pass:
