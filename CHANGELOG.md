@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.17] — 2026-09-05: Hardening — closed a second decoy-mode data path
+
+Found by the same internal bug-bounty pass as v10.18.16, a defense-in-
+depth follow-up:
+
+- **Saving a rotated image back to the vault used a separate write
+  path that bypassed the v10.18.16 fix.** Not reachable in practice —
+  that fix already closed the only way a real image could reach this
+  screen during a decoy session — but closed anyway as a safety net.
+
 ## [10.18.16] — 2026-09-05: Critical fix — adding files during a decoy session silently destroyed them
 
 Found by the same internal bug-bounty pass — the most severe finding
