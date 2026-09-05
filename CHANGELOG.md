@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.13] — 2026-09-04: Bug fix — renaming Nexus could break the Explorer right-click option
+
+Found by the same internal bug-bounty pass:
+
+- **Renaming Nexus (Settings → Privacy) could leave the Explorer
+  right-click "Encrypt with NEXUS" option broken**, if it had been
+  enabled — it kept pointing at the old filename after a rename, which
+  gets deleted shortly after. Now automatically repairs itself on the
+  next launch.
+
 ## [10.18.12] — 2026-09-04: Stability fix — lock could misbehave after many unlocks in one session
 
 Found by the same internal bug-bounty pass:
