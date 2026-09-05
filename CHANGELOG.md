@@ -21,6 +21,16 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.14] — 2026-09-05: Bug fix — internal edge case in secure memory handling
+
+Found by the same internal bug-bounty pass:
+
+- **A rare internal error path was fixed** in the low-level component
+  that securely holds sensitive data in memory — asking it to hold
+  zero bytes could throw an unhandled error instead of doing nothing
+  safely. Not reachable by anything in the current app, but closed
+  as a landmine before any future feature could trip it.
+
 ## [10.18.13] — 2026-09-04: Bug fix — renaming Nexus could break the Explorer right-click option
 
 Found by the same internal bug-bounty pass:
