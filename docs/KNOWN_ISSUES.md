@@ -96,6 +96,18 @@ know these are real, not hypothetical:
   something, even just visiting the Activity Log) could pop a
   "DB decrypt failed — wrong password" warning — a clear tell that
   something's off, directly undercutting the point of decoy mode.
+- **Decoy mode could also show a false "vault seal mismatch" tampering
+  warning**, for the same underlying reason as the database warning
+  above — one more place decoy isolation was missing.
+- **Adding a file to the vault while in a decoy session silently and
+  permanently destroyed it**, while showing a normal success message.
+  This affected dragging files in, importing a folder, exporting a
+  Secure Note to the vault, saving a video-player screenshot,
+  extracting from the ZIP viewer, and the Explorer right-click
+  "Encrypt with NEXUS" option. If you ever added something to the
+  vault while unlocked with a decoy password, it did not survive —
+  there's no way to recover it after the fact, on this or any later
+  version. This is the most serious of the decoy-mode gaps listed here.
 
 All of the above are fixed in source and compiled clean; none have had a
 real-machine functional re-test yet, which is why they're not tagged as a

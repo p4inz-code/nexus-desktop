@@ -21,6 +21,23 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.16] — 2026-09-05: Critical fix — adding files during a decoy session silently destroyed them
+
+Found by the same internal bug-bounty pass — the most severe finding
+of the whole sweep:
+
+- **Adding a file to the vault while unlocked with your decoy password
+  silently and permanently destroyed it**, despite showing a normal
+  success message. This affected dragging files in, importing a
+  folder, exporting a Secure Note to the vault, saving a video-player
+  screenshot, extracting from the ZIP viewer, and the Explorer
+  right-click "Encrypt with NEXUS" option — all of them, whenever the
+  active session was a decoy one. Fixed: these actions now correctly
+  fail with a clear error instead of silently losing your data. If you
+  ever tried adding something while unlocked with a decoy password on
+  a previous version, it did not survive — there is no way to recover
+  it after the fact.
+
 ## [10.18.15] — 2026-09-05: Security fix — decoy mode could show a false tampering warning
 
 Found by the same internal bug-bounty pass:
