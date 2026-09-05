@@ -33,6 +33,15 @@ proves it:
   hook from an automated environment with nobody at the keyboard to
   notice if something goes wrong isn't a risk worth taking for a
   developer-side check that a human can do safely in seconds.
+- **Exe rename (Settings → Privacy) — old file cleanup.** Renaming
+  genuinely works: the copy, identity swap, and relaunch under the new
+  name were verified end-to-end with a real running process. What we
+  could *not* confirm from our dev setup: whether the old-named exe
+  file actually gets deleted a couple seconds after the rename (it's
+  scheduled via a short-lived background helper, the same mechanism the
+  uninstaller uses for its own self-delete). If it's ever left behind,
+  it's inert clutter, not a functional or security problem — but delete
+  it by hand if you notice it sitting there after renaming.
 
 ## Not yet fully audited against the intended design
 
