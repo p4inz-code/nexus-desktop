@@ -29,7 +29,7 @@ period.
 - **Encryption:** AES-256-GCM for vault contents.
 - **Key derivation:** Argon2id from your master password.
 - **Network:** one real exception, the update checker, which talks to
-  GitHub directly (on by default, no Northbyte server involved, disable
+  GitHub directly (on by default, no P4inz Interactive Labs server involved, disable
   anytime in Settings). Everything else (encryption, decryption,
   license-key verification) happens entirely on your device with no
   network call at all.

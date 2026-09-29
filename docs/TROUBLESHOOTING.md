@@ -45,7 +45,7 @@ Nexus has two recovery paths:
    The app's own recovery dialog states this plainly before you confirm,
    since it's an irreversible step.
 2. **Machine bypass**: a fallback tied to your specific device, available
-   through Northbyte Studios if you've lost your recovery phrase too. Has
+   through P4inz Interactive Labs if you've lost your recovery phrase too. Has
    the same limitation as above: it resets your password, it doesn't
    recover files encrypted under the old one.
 

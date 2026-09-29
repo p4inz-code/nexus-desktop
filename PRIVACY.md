@@ -10,7 +10,7 @@ issuing you a beta key).
 - **One real exception to "zero network calls," and it's the update
   checker.** Nexus checks GitHub directly for new releases. It's on by
   default, roughly 5 seconds after you unlock, unless you turn it off in
-  Settings. It talks to GitHub only (never a Northbyte Studios server),
+  Settings. It talks to GitHub only (never a P4inz Interactive Labs server),
   sends nothing about you or your vault, and downloads nothing unless you
   approve it (or you've explicitly switched Settings to auto-install).
   Beyond that one feature, Nexus makes no other network calls: encryption,

@@ -21,6 +21,15 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.21] — 2026-09-29: Studio rename — Northbyte Studios → P4inz Interactive Labs
+
+Nexus is now published by **P4inz Interactive Labs**, not Northbyte
+Studios. This is a name change only — no functional behavior change.
+Every in-app credit (About, EULA, lock screen, media viewers), the
+license text, and this documentation now reflect the new name. Past
+changelog entries below correctly still say "Northbyte Studios" — that
+was genuinely the name at the time and isn't being rewritten.
+
 ## [10.18.20] — 2026-09-05: Security fix — machine ID could collide across unrelated machines
 
 Found by the same internal bug-bounty pass:

@@ -1,6 +1,6 @@
 # Support
 
-Nexus is built and supported by a solo developer (Northbyte Studios). Here's
+Nexus is built and supported by a solo developer (P4inz Interactive Labs). Here's
 the fastest way to get help, depending on what you need.
 
 ## Bug reports & feature requests

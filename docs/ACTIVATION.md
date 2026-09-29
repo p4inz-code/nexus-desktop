@@ -3,7 +3,7 @@
 ## How keys work during the beta
 
 Nexus is free during the public beta, but there's no automated purchase or
-self-serve signup. Keys are issued manually by Northbyte Studios. This is
+self-serve signup. Keys are issued manually by P4inz Interactive Labs. This is
 a deliberate trade-off: no payment processor, no account system, no server
 at all. The cost is that getting a key takes a human on the other end.
 
@@ -12,7 +12,7 @@ To request one:
 - Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW)
 - Email: atharva.patil.cg@gmail.com
 
-The first 20 to 30 active beta testers may, at Northbyte Studios' discretion,
+The first 20 to 30 active beta testers may, at P4inz Interactive Labs' discretion,
 receive a complimentary lifetime license as a thank-you. This isn't a
 formal program with published eligibility rules. Just tell us you're
 using Nexus and we'll take it from there.

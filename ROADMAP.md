@@ -30,7 +30,7 @@ current line has continued through security and stability work. See the
 - Introduce a paid tier once the beta period concludes, per the terms in the
   [License](LICENSE). Beta testers will be notified via Discord before any
   change takes effect, with preferential terms considered for early
-  supporters at Northbyte Studios' discretion.
+  supporters at P4inz Interactive Labs' discretion.
 - Server-side license verification returns at this stage (the current
   offline verification is intentionally minimal-trust, appropriate for a
   free beta; see

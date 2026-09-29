@@ -76,12 +76,12 @@ Nexus is free during the public beta, but there's no self-serve purchase flow ye
 - Discord: [discord.gg/8UKt8s5FbW](https://discord.gg/8UKt8s5FbW)
 - Email: atharva.patil.cg@gmail.com
 
-The first 20 to 30 active beta testers may receive a complimentary lifetime license, at Northbyte Studios' sole discretion. This isn't a formal program with guaranteed terms, just our way of thanking early testers.
+The first 20 to 30 active beta testers may receive a complimentary lifetime license, at P4inz Interactive Labs' sole discretion. This isn't a formal program with guaranteed terms, just our way of thanking early testers.
 
 ## Security model
 
 - **AES-256-GCM** for vault encryption, **Argon2id** for master-password key derivation.
-- Offline-first: encryption, decryption, and license verification all happen locally. The one exception is an optional update checker (GitHub only, no Northbyte Studios server, on by default, can be turned off in Settings). See [Privacy](PRIVACY.md).
+- Offline-first: encryption, decryption, and license verification all happen locally. The one exception is an optional update checker (GitHub only, no P4inz Interactive Labs server, on by default, can be turned off in Settings). See [Privacy](PRIVACY.md).
 - No account, no server-side anything.
 
 Nexus is closed-source. This repository hosts release binaries, documentation, and issue tracking, not the application source.
@@ -109,7 +109,7 @@ Nexus is proprietary software. See [LICENSE](LICENSE) for the full end-user lice
 
 ---
 
-Built by [Northbyte Studios](https://discord.gg/8UKt8s5FbW).
+Built by [P4inz Interactive Labs](https://discord.gg/8UKt8s5FbW).
 
 ---
 
