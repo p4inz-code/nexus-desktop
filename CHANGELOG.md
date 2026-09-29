@@ -21,6 +21,15 @@ you want that level of detail for a specific change, ask on
 > See [Known Issues](docs/KNOWN_ISSUES.md) for what's still open in the
 > v10.12.5 build specifically.
 
+## [10.18.22] — 2026-09-29: Trimmed the in-app "What's New" history
+
+The in-app What's New list (Nexus's own version history screen) is now
+a highlights reel — major releases and version-range summaries starting
+from the first public beta — instead of a full per-patch log going back
+to our earliest internal builds. **This changelog you're reading right
+now is untouched** and remains the full, unabridged record for every
+version; nothing was deleted from it, only from the in-app list.
+
 ## [10.18.21] — 2026-09-29: Studio rename — Northbyte Studios → P4inz Interactive Labs
 
 Nexus is now published by **P4inz Interactive Labs**, not Northbyte
