@@ -1,4 +1,4 @@
-# Activation & License Keys
+# Activation & license keys
 
 ## How keys work during the beta
 
@@ -25,8 +25,8 @@ password and generate your recovery phrase.
 
 Keys are:
 
-- **Non-transferable**: issued to you personally.
-- **Bound to your machine.** Verification happens entirely offline, on your
+- Non-transferable: issued to you personally.
+- Bound to your machine. Verification happens entirely offline, on your
   device. There's no server checking in.
 
 ## Moving to a new machine / reinstalling

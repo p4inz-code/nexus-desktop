@@ -1,4 +1,4 @@
-# Security Policy
+# Security policy
 
 ## Reporting a vulnerability
 
@@ -26,16 +26,16 @@ period.
 
 ## Our security model
 
-- **Encryption:** AES-256-GCM for vault contents.
-- **Key derivation:** Argon2id from your master password.
-- **Network:** one real exception, the update checker, which talks to
+- Encryption: AES-256-GCM for vault contents.
+- Key derivation: Argon2id from your master password.
+- Network: one real exception, the update checker, which talks to
   GitHub directly (on by default, no P4inz Interactive Labs server involved, disable
   anytime in Settings). Everything else (encryption, decryption,
   license-key verification) happens entirely on your device with no
   network call at all.
-- **Telemetry:** none. No analytics, no crash reporting, no phone-home of
+- Telemetry: none. No analytics, no crash reporting, no phone-home of
   any kind.
-- **Account:** none required. There is no server holding your data or your
+- Account: none required. There is no server holding your data or your
   password.
 
 We deliberately don't publish specific benchmark numbers, certifications, or

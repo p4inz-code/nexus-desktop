@@ -11,7 +11,7 @@ against [SECURITY.md](../SECURITY.md).
 
 1. Confirm you're on Windows 10 or 11 (64-bit). Nexus doesn't run on
    Windows 7/8 or on non-Windows systems.
-2. Check for a `nexus_startup.log` file on your **Desktop**. Nexus writes a
+2. Check for a `nexus_startup.log` file on your Desktop. Nexus writes a
    step-by-step trace there as it starts up; if it crashes silently, the
    **last line** in that file tells us where it died. Attach this file when
    you report the issue.
@@ -35,7 +35,7 @@ against [SECURITY.md](../SECURITY.md).
 
 Nexus has two recovery paths:
 
-1. **Recovery phrase**: the phrase you were shown during setup. If you
+1. Recovery phrase: the phrase you were shown during setup. If you
    saved it, use it from the lock screen to set a new master password.
    **Important:** this resets your password, it does not decrypt your old
    files. Anything added to the vault before you use it stays encrypted
@@ -44,7 +44,7 @@ Nexus has two recovery paths:
    derived from your password, not a separately recoverable master key.
    The app's own recovery dialog states this plainly before you confirm,
    since it's an irreversible step.
-2. **Machine bypass**: a fallback tied to your specific device, available
+2. Machine bypass: a fallback tied to your specific device, available
    through P4inz Interactive Labs if you've lost your recovery phrase too. Has
    the same limitation as above: it resets your password, it doesn't
    recover files encrypted under the old one.

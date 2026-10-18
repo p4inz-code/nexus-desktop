@@ -1,6 +1,6 @@
 <!--
 Note: Nexus itself is closed-source. This repository hosts the landing
-page, documentation, and releases — it does not contain the application
+page, documentation, and releases, it does not contain the application
 source code, and we're not accepting code contributions to the app here.
 
 Pull requests are welcome for documentation fixes, typos, clarity

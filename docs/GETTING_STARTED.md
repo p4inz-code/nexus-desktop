@@ -25,8 +25,8 @@ unsigned executable regardless of what it actually does.
 
 This is not a sign that something is wrong with the file. To proceed:
 
-1. On the SmartScreen dialog, click **"More info"**.
-2. Click **"Run anyway"**.
+1. On the SmartScreen dialog, click "More info".
+2. Click "Run anyway".
 
 If you'd rather not take our word for it, verify the SHA-256 hash against
 the one published with the release first (see [SECURITY.md](../SECURITY.md)).
@@ -40,7 +40,7 @@ That confirms you have the exact file we published, unmodified.
 3. Enter the license key you received via Discord or email. See
    [Activation](ACTIVATION.md) for details on the key format and what
    activation does (and doesn't) do.
-4. Set your master password. **Write this down somewhere safe.** See the
+4. Set your master password. Write this down somewhere safe. See the
    warning below.
 5. You'll be given a recovery phrase during setup. Store it somewhere
    secure and offline (not in the vault it's protecting, obviously).

@@ -3,7 +3,7 @@
 Nexus is built by a solo developer. This roadmap is directional, not a
 promise with dates. Priorities can and will shift based on beta feedback.
 
-## Now: Public Beta
+## Now: public beta
 
 Nexus is in active public beta. `v10.9.1` was the first public tag; the
 current line has continued through security and stability work. See the
@@ -25,7 +25,7 @@ current line has continued through security and stability work. See the
 - Evaluate code signing once there's a sustainable path to afford an EV
   certificate. This removes the SmartScreen warning at first run.
 
-## Later: Paid Version
+## Later: paid version
 
 - Introduce a paid tier once the beta period concludes, per the terms in the
   [License](LICENSE). Beta testers will be notified via Discord before any

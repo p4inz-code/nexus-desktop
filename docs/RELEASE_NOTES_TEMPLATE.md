@@ -30,12 +30,12 @@ _One-line summary of what this release is about._
 
 ## Known issues in this release
 
-- _Anything you're shipping with known gaps — be upfront, same as
+- _Anything you're shipping with known gaps, be upfront, same as
   [KNOWN_ISSUES.md](KNOWN_ISSUES.md)._
 
 ## Upgrading
 
-_Anything a user needs to do or know before upgrading — e.g. "no action
+_Anything a user needs to do or know before upgrading, e.g. "no action
 needed, just replace the exe" or specific migration steps if the vault
 format changed._
 
@@ -46,5 +46,5 @@ See [CHANGELOG.md](../CHANGELOG.md) for the complete version history.
 ---
 
 **Verify before you run it.** This release is not code-signed. Check the
-SHA-256 hash above against your download before running — see
+SHA-256 hash above against your download before running. See
 [SECURITY.md](../SECURITY.md).

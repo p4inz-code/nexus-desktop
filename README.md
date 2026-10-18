@@ -44,13 +44,13 @@ Real frames from the current UI, not concept art.
 
 ## What Nexus does
 
-- **Encrypted vault**: import files and folders into an AES-256-GCM encrypted vault with a master password (Argon2id key derivation). List and grid views, drag-and-drop import, color tags, pinning, and per-file expiry (TTL).
-- **Personal data, encrypted alongside your files**: a credentials manager (with TOTP support), a journal, bookmarks, and a contacts list, all stored inside the same encrypted vault.
-- **Smart Collections**: auto-grouped views of your vault (recent items, large files, images, documents, audio, video, items expiring soon, and color-tagged items) so you don't have to dig through folders.
-- **Zero-Trace Launcher**: launch other apps in a sandboxed session from inside Nexus. Temp files and traces from that session are wiped when it closes.
-- **Security layer**: anti-tamper checks, clipboard guard, screen-capture protection ("Streamer Mode"), honeypot bait files with intruder logging, and a tamper-evident activity log (HMAC-chained, so silent edits or deletions are detectable).
-- **Recovery**: a recovery phrase and a machine-bound bypass path for account recovery if you lose your master password. **There is no cloud password reset.** If you lose both, your vault is unrecoverable by design.
-- **Multiple vaults**: switch between separate encrypted vaults, with decoy-vault support for plausible deniability.
+- Encrypted vault: import files and folders into an AES-256-GCM encrypted vault with a master password (Argon2id key derivation). List and grid views, drag-and-drop import, color tags, pinning, and per-file expiry (TTL).
+- Personal data, encrypted alongside your files: a credentials manager (with TOTP support), a journal, bookmarks, and a contacts list, all stored inside the same encrypted vault.
+- Smart Collections: auto-grouped views of your vault (recent items, large files, images, documents, audio, video, items expiring soon, and color-tagged items) so you don't have to dig through folders.
+- Zero-Trace Launcher: launch other apps in a sandboxed session from inside Nexus. Temp files and traces from that session are wiped when it closes.
+- Security layer: anti-tamper checks, clipboard guard, screen-capture protection ("Streamer Mode"), honeypot bait files with intruder logging, and a tamper-evident activity log (HMAC-chained, so silent edits or deletions are detectable).
+- Recovery: a recovery phrase and a machine-bound bypass path for account recovery if you lose your master password. There is no cloud password reset. If you lose both, your vault is unrecoverable by design.
+- Multiple vaults: switch between separate encrypted vaults, with decoy-vault support for plausible deniability.
 
 Nexus is a native Windows desktop application, built with WPF and .NET 8.
 
@@ -60,7 +60,7 @@ Being upfront about this matters more to us than it looks impressive:
 
 - No cloud sync, no server component, no account system.
 - No telemetry, no analytics, no crash reporting sent anywhere.
-- No code signing yet. Windows SmartScreen **will** show a warning on first run; see [Getting Started](docs/GETTING_STARTED.md) for what that means and how to proceed safely.
+- No code signing yet. Windows SmartScreen will show a warning on first run; see [Getting Started](docs/GETTING_STARTED.md) for what that means and how to proceed safely.
 - No mobile or macOS/Linux version. Windows only.
 
 ## Download
@@ -80,7 +80,7 @@ The first 20 to 30 active beta testers may receive a complimentary lifetime lice
 
 ## Security model
 
-- **AES-256-GCM** for vault encryption, **Argon2id** for master-password key derivation.
+- AES-256-GCM for vault encryption, Argon2id for master-password key derivation.
 - Offline-first: encryption, decryption, and license verification all happen locally. The one exception is an optional update checker (GitHub only, no P4inz Interactive Labs server, on by default, can be turned off in Settings). See [Privacy](PRIVACY.md).
 - No account, no server-side anything.
 

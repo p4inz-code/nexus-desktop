@@ -7,7 +7,7 @@ assignees: p4inz-code
 ---
 
 **Before you file this:** please check [Known Issues](https://github.com/p4inz-code/nexus-desktop/blob/main/docs/KNOWN_ISSUES.md)
-and [Troubleshooting](https://github.com/p4inz-code/nexus-desktop/blob/main/docs/TROUBLESHOOTING.md) — your issue might
+and [Troubleshooting](https://github.com/p4inz-code/nexus-desktop/blob/main/docs/TROUBLESHOOTING.md), your issue might
 already be documented there.
 
 ## What happened
@@ -35,14 +35,14 @@ What you expected to happen instead.
 ## Log files
 
 If Nexus crashed or failed to start, please attach `nexus_startup.log`
-and/or `nexus_crash.log` from your **Desktop** if present — see
+and/or `nexus_crash.log` from your **Desktop** if present. See
 [Troubleshooting](https://github.com/p4inz-code/nexus-desktop/blob/main/docs/TROUBLESHOOTING.md)
 for details. These only contain local diagnostic info; nothing is sent
 anywhere automatically.
 
 ## Screenshots
 
-If applicable — but please redact anything from inside your vault.
+If applicable, but please redact anything from inside your vault.
 
 ## Anything else?
 

@@ -1,4 +1,4 @@
-# Privacy Policy
+# Privacy policy
 
 Nexus is built around a simple principle: your data should never leave your
 device. This document explains exactly what is, and isn't, collected, both
@@ -16,11 +16,11 @@ issuing you a beta key).
   Beyond that one feature, Nexus makes no other network calls: encryption,
   decryption, and license-key verification all happen locally on your
   machine, with no server involved.
-- **Zero telemetry.** No analytics, no crash reporting, no usage tracking,
+- Zero telemetry. No analytics, no crash reporting, no usage tracking,
   no "anonymous" diagnostics sent anywhere.
-- **No account.** There is nothing to sign up for and no server that knows
+- No account. There is nothing to sign up for and no server that knows
   you exist.
-- **Your files stay on your device.** Nexus has no cloud sync or backup
+- Your files stay on your device. Nexus has no cloud sync or backup
   feature. Whatever you put in your vault stays in your vault, encrypted,
   on your machine, until you export it yourself.
 
