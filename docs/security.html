@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security | Nexus</title><meta name="description" content="How Nexus protects your data with AES-256-GCM and Argon2id, what it keeps offline, and the limits we want you to know about."><meta name="color-scheme" content="dark light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Security | Nexus"><meta property="og:description" content="How Nexus protects your data with AES-256-GCM and Argon2id, what it keeps offline, and the limits we want you to know about."><meta property="og:type" content="website">
+<meta property="og:image" content="https://p4inz-code.github.io/nexus-desktop/img/og.png"><meta property="og:url" content="https://p4inz-code.github.io/nexus-desktop/security.html"><meta property="og:site_name" content="Nexus">
+<meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://p4inz-code.github.io/nexus-desktop/security.html">
+<meta name="theme-color" content="#0a0810"><meta name="author" content="Atharva Patil"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nexus","applicationCategory":"SecurityApplication","operatingSystem":"Windows 10, Windows 11","description":"An offline-first, encrypted file vault for Windows.","url":"https://p4inz-code.github.io/nexus-desktop/","image":"https://p4inz-code.github.io/nexus-desktop/img/og.png","author":{"@type":"Organization","name":"P4inz Interactive Labs","url":"https://atharvapatil.tech","email":"atharva.patil.cg@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Navi Mumbai","addressCountry":"IN"}},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free during the public beta"}}</script>
+</head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar"><a class="brand" href="index.html"><img src="img/nexus-mark.svg" alt="" width="28" height="28">Nexus</a>
+<nav class="nav" aria-label="Main"><a href="features.html">Features</a><a href="security.html" aria-current="page">Security</a><a href="pricing.html">Pricing</a><a href="support.html">Support</a></nav><a class="btn small" href="download.html">Download</a></div></header>
+<main id="main">
+
+<section class="wrap tight"><p class="eyebrow">Security</p><h1>What protects your data, and what does not</h1>
+<p class="lead">We would rather tell you the limits up front than have you find them later.</p></section>
+<section class="wrap"><h2>What Nexus does</h2><div class="scroll"><table><tbody>
+<tr><th scope="row">Encryption</th><td>Vault contents are encrypted with AES-256-GCM.</td></tr>
+<tr><th scope="row">Key derivation</th><td>Your encryption key is derived from your master password with Argon2id (128 MB of memory, 4 iterations).</td></tr>
+<tr><th scope="row">Offline</th><td>Encryption, decryption and license-key checks all happen on your PC. There is no account and no server holding your data.</td></tr>
+<tr><th scope="row">Network use</th><td>One optional call: the update check, which talks to GitHub only. It sends nothing about you or your vault, and you can turn it off in Settings.</td></tr>
+<tr><th scope="row">Telemetry</th><td>None. No analytics, no crash reporting, no usage tracking.</td></tr>
+<tr><th scope="row">Recovery</th><td>A 24-word recovery phrase you keep yourself. There is no cloud password reset. If you lose the password and the phrase, the vault cannot be recovered.</td></tr>
+<tr><th scope="row">Protection layers</th><td>Auto-lock, anti-tamper checks, a clipboard guard, screen-capture protection, an HMAC-chained activity log, honeypot files, a decoy vault and a panic wipe hotkey.</td></tr></tbody></table></div></section>
+
+<section class="band"><div class="wrap"><h2>What we do not claim</h2>
+<ul class="list no"><li>Nexus has not been independently audited or certified by anyone. We publish no benchmarks and no certifications we have not earned.</li><li>The code is closed source, so you cannot inspect it yourself.</li><li>The program is not code-signed yet. Windows will warn you the first time you run it.</li><li>No vault can protect a PC that is already compromised, for example by malware running as you.</li><li>Some recent features have not had enough hands-on testing yet. The <a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/KNOWN_ISSUES.md" rel="noopener noreferrer">known issues page</a> says which.</li></ul></div></section>
+
+<section class="wrap"><h2>Check what you downloaded</h2>
+<p class="muted">Every release ships a SHA-256 hash next to the program. Compare it with your copy before you run it. The <a href="download.html">download page</a> walks through it.</p>
+<h2>Report a vulnerability</h2><p class="muted">Please do not open a public issue. Email <a href="mailto:atharva.patil.cg@gmail.com">atharva.patil.cg@gmail.com</a> or message us on Discord. The <a href="https://github.com/p4inz-code/nexus-desktop/blob/main/SECURITY.md" rel="noopener noreferrer">security policy</a> explains how we handle reports.</p></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="cols">
+<div><a class="brand" href="index.html"><img src="img/nexus-mark.svg" alt="" width="28" height="28">Nexus</a>
+<p>An offline-first, encrypted file vault for Windows. Your files stay on your own PC.</p>
+<p>Made by Atharva Patil at P4inz Interactive Labs, Navi Mumbai. More of our tools are at <a href="https://atharvapatil.tech" rel="noopener noreferrer">atharvapatil.tech</a>.</p></div>
+<div><h2>Product</h2><ul><li><a href="features.html">Features</a></li><li><a href="security.html">Security</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li></ul></div>
+<div><h2>Help</h2><ul><li><a href="support.html">Support</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/GETTING_STARTED.md" rel="noopener noreferrer">Getting started</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/KNOWN_ISSUES.md" rel="noopener noreferrer">Known issues</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/CHANGELOG.md" rel="noopener noreferrer">Changelog</a></li></ul></div>
+<div><h2>Legal</h2><ul><li><a href="privacy.html">Privacy</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/LICENSE" rel="noopener noreferrer">License</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/SECURITY.md" rel="noopener noreferrer">Security policy</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop" rel="noopener noreferrer">GitHub</a></li></ul></div>
+</div><p class="legal">Copyright 2026 P4inz Interactive Labs. All rights reserved. This site sets no cookies, runs no trackers and makes no requests to other sites. The scripts on it are small local files that send nothing.</p></div></footer>
+</body></html>

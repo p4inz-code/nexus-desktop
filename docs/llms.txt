@@ -1,0 +1,9 @@
+# Nexus
+
+> An offline-first, encrypted file vault for Windows by P4inz Interactive Labs. AES-256-GCM, Argon2id, no account, no telemetry. Free during the public beta.
+
+- [Features](https://p4inz-code.github.io/nexus-desktop/features.html)
+- [Security and limits](https://p4inz-code.github.io/nexus-desktop/security.html)
+- [Pricing](https://p4inz-code.github.io/nexus-desktop/pricing.html)
+- [Download](https://p4inz-code.github.io/nexus-desktop/download.html)
+- [Support](https://p4inz-code.github.io/nexus-desktop/support.html)

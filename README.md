@@ -20,7 +20,7 @@ Nexus keeps your files, notes, credentials, and personal data behind strong loca
 
 ## Screenshots
 
-Real frames from the current UI, not concept art.
+Design previews of the interface. Real screenshots are coming.
 
 <p align="center">
   <img src="assets/screenshots/lock-screen.png" alt="Nexus lock screen: split brand and master password entry with trust chips for AES-256-GCM, zero telemetry, offline-first, anti-tamper" width="100%">

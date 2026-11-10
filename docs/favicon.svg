@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="t d">
+  <title id="t">Nexus</title>
+  <desc id="d">Nexus symbol, simplified for small sizes (16-32px).</desc>
+  <defs>
+    <linearGradient id="sTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8B0FF"></stop><stop offset="1" stop-color="#B86CFF"></stop></linearGradient>
+    <linearGradient id="sLeft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C448FF"></stop><stop offset="1" stop-color="#8A1FE0"></stop></linearGradient>
+    <linearGradient id="sRight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7E1ED9"></stop><stop offset="1" stop-color="#4A0699"></stop></linearGradient>
+    <radialGradient id="sBhOut" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE6FF" stop-opacity="0"></stop><stop offset=".55" stop-color="#D090FF" stop-opacity=".55"></stop><stop offset="1" stop-color="#6A0ECC" stop-opacity="0"></stop></radialGradient>
+    <radialGradient id="sBhCore" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#000000"></stop><stop offset=".7" stop-color="#0A0610"></stop><stop offset="1" stop-color="#1A0D2E"></stop></radialGradient>
+  </defs>
+
+  <polygon points="120,30 210,80 120,130 30,80" fill="url(#sTop)"></polygon>
+  <polygon points="30,80 120,130 120,220 30,170" fill="url(#sLeft)"></polygon>
+  <polygon points="210,80 120,130 120,220 210,170" fill="url(#sRight)"></polygon>
+  <circle cx="120" cy="130" r="22" fill="url(#sBhOut)"></circle>
+  <circle cx="120" cy="130" r="13" fill="url(#sBhCore)"></circle>
+  <circle cx="120" cy="130" r="13" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1"></circle>
+  <circle cx="120" cy="130" r="4.5" fill="#D090FF"></circle>
+  <circle cx="120" cy="130" r="2" fill="#FFFFFF"></circle>
+</svg>

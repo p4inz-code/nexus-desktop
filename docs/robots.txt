@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://p4inz-code.github.io/nexus-desktop/sitemap.xml

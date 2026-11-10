@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download | Nexus</title><meta name="description" content="Download Nexus for Windows 10 and 11. A single file, with a SHA-256 checker and plain steps for the SmartScreen warning."><meta name="color-scheme" content="dark light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Download | Nexus"><meta property="og:description" content="Download Nexus for Windows 10 and 11. A single file, with a SHA-256 checker and plain steps for the SmartScreen warning."><meta property="og:type" content="website">
+<meta property="og:image" content="https://p4inz-code.github.io/nexus-desktop/img/og.png"><meta property="og:url" content="https://p4inz-code.github.io/nexus-desktop/download.html"><meta property="og:site_name" content="Nexus">
+<meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://p4inz-code.github.io/nexus-desktop/download.html">
+<meta name="theme-color" content="#0a0810"><meta name="author" content="Atharva Patil"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nexus","applicationCategory":"SecurityApplication","operatingSystem":"Windows 10, Windows 11","description":"An offline-first, encrypted file vault for Windows.","url":"https://p4inz-code.github.io/nexus-desktop/","image":"https://p4inz-code.github.io/nexus-desktop/img/og.png","author":{"@type":"Organization","name":"P4inz Interactive Labs","url":"https://atharvapatil.tech","email":"atharva.patil.cg@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Navi Mumbai","addressCountry":"IN"}},"offers":{"@type":"Offer","price":"0","priceCurrency":"INR","description":"Free during the public beta"}}</script>
+</head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar"><a class="brand" href="index.html"><img src="img/nexus-mark.svg" alt="" width="28" height="28">Nexus</a>
+<nav class="nav" aria-label="Main"><a href="features.html">Features</a><a href="security.html">Security</a><a href="pricing.html">Pricing</a><a href="support.html">Support</a></nav><a class="btn small" href="download.html">Download</a></div></header>
+<main id="main">
+
+<section class="wrap tight"><p class="eyebrow">Download</p><h1>Get Nexus for Windows</h1>
+<p class="lead">A single file, no installer. Requires Windows 10 or 11, 64-bit, and a beta license key.</p>
+<div class="actions"><a class="btn" href="https://github.com/p4inz-code/nexus-desktop/releases/latest" rel="noopener noreferrer">Download from GitHub Releases</a><a class="btn ghost" href="support.html">Ask for a key</a></div>
+<p class="note">The button opens the latest release on GitHub. Download Nexus.exe and the matching Nexus.exe.sha256 file.</p>
+<div class="callout"><p>The newest release listed on GitHub may be older than the version we are testing. A newer build will be published there once testing is done. The <a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/KNOWN_ISSUES.md" rel="noopener noreferrer">known issues page</a> lists what is fixed in development and not yet released.</p></div></section>
+
+<section class="band"><div class="wrap"><h2>Install</h2>
+<ol class="steps"><li><strong>Check the file.</strong> Use the checker below to confirm your copy matches the published hash.</li>
+<li><strong>Run Nexus.exe.</strong> Windows will probably show a blue "Windows protected your PC" screen. Nexus is not code-signed yet, so this happens with any new unsigned program.</li>
+<li><strong>Choose More info, then Run anyway.</strong> Only do this after the hash matches.</li>
+<li><strong>Activate.</strong> Accept the license, enter your key, then set a master password and write down your recovery phrase.</li></ol></div></section>
+
+<section class="wrap"><h2>Check your download</h2>
+<p class="muted">Select the file you downloaded. Your browser works out its SHA-256 hash locally and nothing is uploaded. Paste the hash from the release if you want the page to compare for you.</p>
+<label for="hash-file">Nexus.exe</label><input id="hash-file" type="file" accept=".exe">
+<label for="hash-expected">Hash from the release (optional)</label><input id="hash-expected" type="text" placeholder="64 character SHA-256 value" autocomplete="off" spellcheck="false">
+<div id="hash-out" class="callout" role="status" aria-live="polite"><p>Choose the file to see its hash.</p></div>
+<h3>Or check it yourself</h3>
+<div class="code"><code id="cmd-ps">Get-FileHash .\Nexus.exe -Algorithm SHA256</code><button class="btn ghost small" type="button" data-copy="#cmd-ps">Copy</button></div>
+<p class="note">Run that in PowerShell from the folder that holds the file.</p></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="cols">
+<div><a class="brand" href="index.html"><img src="img/nexus-mark.svg" alt="" width="28" height="28">Nexus</a>
+<p>An offline-first, encrypted file vault for Windows. Your files stay on your own PC.</p>
+<p>Made by Atharva Patil at P4inz Interactive Labs, Navi Mumbai. More of our tools are at <a href="https://atharvapatil.tech" rel="noopener noreferrer">atharvapatil.tech</a>.</p></div>
+<div><h2>Product</h2><ul><li><a href="features.html">Features</a></li><li><a href="security.html">Security</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li></ul></div>
+<div><h2>Help</h2><ul><li><a href="support.html">Support</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/GETTING_STARTED.md" rel="noopener noreferrer">Getting started</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/docs/KNOWN_ISSUES.md" rel="noopener noreferrer">Known issues</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/CHANGELOG.md" rel="noopener noreferrer">Changelog</a></li></ul></div>
+<div><h2>Legal</h2><ul><li><a href="privacy.html">Privacy</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/LICENSE" rel="noopener noreferrer">License</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop/blob/main/SECURITY.md" rel="noopener noreferrer">Security policy</a></li><li><a href="https://github.com/p4inz-code/nexus-desktop" rel="noopener noreferrer">GitHub</a></li></ul></div>
+</div><p class="legal">Copyright 2026 P4inz Interactive Labs. All rights reserved. This site sets no cookies, runs no trackers and makes no requests to other sites. The scripts on it are small local files that send nothing.</p></div></footer>
+</body></html>
