@@ -108,6 +108,20 @@ know these are real, not hypothetical:
   vault while unlocked with a decoy password, it did not survive
   there's no way to recover it after the fact, on this or any later
   version. This is the most serious of the decoy-mode gaps listed here.
+- **A decoy session could reach actions that change the real
+  installation.** The Settings page did not know it was running in a
+  decoy session. From there, someone who only had the decoy password could
+  rename the Nexus program file, start the uninstaller (which asks whether
+  to delete your vault data too), change the Explorer right-click setting,
+  and create or delete vaults from the vault switcher. Rename and uninstall
+  exist only in builds newer than the v10.12.5 download. Creating and
+  deleting vaults and the Explorer setting are older features and very
+  likely affect v10.12.5 too, but we have not re-tested that build. The
+  messages that refused a decoy session also said "decoy mode" in plain
+  words, which gave the decoy away. All of these are fixed in source: every
+  one of those actions is now blocked in a decoy session, and every
+  refusal uses one neutral message. The Settings page part of the fix has
+  not been tried by hand yet.
 
 All of the above are fixed in source and compiled clean; none have had a
 real-machine functional re-test yet, which is why they're not tagged as a
